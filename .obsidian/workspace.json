@@ -150,13 +150,12 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Untitled.base",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Untitled"
+              "title": "Outline"
             }
           },
           {
@@ -188,10 +187,10 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "6ca11c6d315475a4",
+  "active": "aeb09f91fa2cd489",
   "lastOpenFiles": [
-    "2026-08-24.md",
     "Untitled.base",
+    "2026-08-24.md",
     "create a link.md",
     "Welcome.md",
     "Untitled 1.canvas",
