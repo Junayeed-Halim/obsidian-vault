@@ -116,7 +116,7 @@ Quick-reference notes for quizzes and short assessments. Covers key definitions,
 
 ## Related
 
-- [[UTS/Machine Learning/Week 01]]
-- [[UTS/Machine Learning/Week 02]]
-- [[UTS/Machine Learning/Week 03]]
-- [[UTS/Machine Learning/Exam Revision]]
+- [[UTS/Machine Learning/Sources/Lecture/Week 01]]
+- [[UTS/Machine Learning/Sources/Lecture/Week 02]]
+- [[UTS/Machine Learning/Sources/Lecture/Week 03]]
+- [[UTS/Machine Learning/Notes/Exam Revision]]

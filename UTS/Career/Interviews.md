@@ -69,7 +69,7 @@ Structure answers with **STAR**:
 ## ML Interview Questions
 
 **Fundamentals:**
-- What is the bias-variance tradeoff? → [[UTS/Machine Learning/Week 02]]
+- What is the bias-variance tradeoff? → [[UTS/Machine Learning/Sources/Lecture/Week 02]]
 - Explain overfitting and how to prevent it.
 - What's the difference between L1 and L2 regularisation?
 - How does k-NN work? What are its limitations?
@@ -123,5 +123,5 @@ Structure answers with **STAR**:
 
 - [[UTS/Career/AWS]] — AWS technical notes
 - [[UTS/Career/Azure]] — Azure technical notes
-- [[UTS/Machine Learning/Exam Revision]] — ML concepts review
-- [[UTS/Machine Learning/Quiz Notes]] — quick formula reference
+- [[UTS/Machine Learning/Notes/Exam Revision]] — ML concepts review
+- [[UTS/Machine Learning/Notes/Quiz Notes]] — quick formula reference

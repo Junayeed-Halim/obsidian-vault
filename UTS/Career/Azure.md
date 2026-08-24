@@ -100,4 +100,4 @@ Microsoft Azure is the second-largest cloud platform. These notes cover core ser
 
 - [[UTS/Career/AWS]] — AWS notes
 - [[UTS/Career/Interviews]] — cloud interview questions
-- [[UTS/Cloud Computing]] — course materials
+- [[UTS/Cloud Computing Infrastructure/Notes/Cloud Computing]] — course materials

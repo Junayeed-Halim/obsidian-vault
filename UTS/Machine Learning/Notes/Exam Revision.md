@@ -211,8 +211,8 @@ Repeat until convergence:
 
 ## Related
 
-- [[UTS/Machine Learning/Week 01]] — fundamentals
-- [[UTS/Machine Learning/Week 02]] — regression and evaluation
-- [[UTS/Machine Learning/Week 03]] — classification algorithms
-- [[UTS/Machine Learning/Quiz Notes]] — quick formula reference
+- [[UTS/Machine Learning/Sources/Lecture/Week 01]] — fundamentals
+- [[UTS/Machine Learning/Sources/Lecture/Week 02]] — regression and evaluation
+- [[UTS/Machine Learning/Sources/Lecture/Week 03]] — classification algorithms
+- [[UTS/Machine Learning/Notes/Quiz Notes]] — quick formula reference
 - [[UTS/Career/Interviews]] — ML interview prep

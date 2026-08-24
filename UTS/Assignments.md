@@ -30,4 +30,4 @@ When a new assignment is released, create `UTS/Assignments/<Assignment Name>.md`
 ## Related
 - [[UTS/Machine Learning]] — ML course notes
 - [[UTS/Privacy Preserving]] — privacy course notes
-- [[UTS/Cloud Computing]] — cloud course notes
+- [[UTS/Cloud Computing Infrastructure/Notes/Cloud Computing]] — cloud course notes

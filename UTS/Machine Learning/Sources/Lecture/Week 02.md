@@ -38,7 +38,7 @@ Iteratively update parameters to minimise the cost function:
 - \(\alpha\) is the **learning rate** — too large causes divergence, too small is slow.
 - Batch gradient descent uses the entire dataset; stochastic uses one example at a time; mini-batch is a compromise.
 
-See [[UTS/Machine Learning/Week 03]] for how this extends to classification.
+See [[UTS/Machine Learning/Sources/Lecture/Week 03]] for how this extends to classification.
 
 ## Model Evaluation Metrics
 
@@ -61,7 +61,7 @@ See [[UTS/Machine Learning/Week 03]] for how this extends to classification.
 | **F1 Score** | \(2 \cdot \frac{Precision \cdot Recall}{Precision + Recall}\) — harmonic mean |
 | **ROC-AUC** | Area under the Receiver Operating Characteristic curve |
 
-> Confusion matrices are essential — see [[UTS/Machine Learning/Quiz Notes]] for common pitfalls.
+> Confusion matrices are essential — see [[UTS/Machine Learning/Notes/Quiz Notes]] for common pitfalls.
 
 ## Bias-Variance Tradeoff
 
@@ -85,7 +85,7 @@ Common choice: \(k = 5\) or \(k = 10\).
 
 ## Related
 
-- [[UTS/Machine Learning/Week 01]] — ML fundamentals
-- [[UTS/Machine Learning/Week 03]] — classification algorithms
-- [[UTS/Machine Learning/Quiz Notes]] — key formulas and concepts
-- [[UTS/Machine Learning/Exam Revision]] — comprehensive revision
+- [[UTS/Machine Learning/Sources/Lecture/Week 01]] — ML fundamentals
+- [[UTS/Machine Learning/Sources/Lecture/Week 03]] — classification algorithms
+- [[UTS/Machine Learning/Notes/Quiz Notes]] — key formulas and concepts
+- [[UTS/Machine Learning/Notes/Exam Revision]] — comprehensive revision

@@ -12,7 +12,7 @@ tags:
 
 # Cloud Computing
 
-Course notes for [[UTS/Cloud Computing]].
+Course notes for [[UTS/Cloud Computing Infrastructure/Notes/Cloud Computing]].
 
 ## Overview
 

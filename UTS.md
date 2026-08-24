@@ -16,18 +16,18 @@ University of Technology Sydney course notes and materials.
 ## Courses
 
 ### Machine Learning
-- [[UTS/Machine Learning/Week 01|Week 01 - Intro]]
-- [[UTS/Machine Learning/Week 02|Week 02 - Supervised Learning]]
-- [[UTS/Machine Learning/Week 03|Week 03 - Classification]]
-- [[UTS/Machine Learning/Quiz Notes|Quiz Notes]]
-- [[UTS/Machine Learning/Exam Revision|Exam Revision]]
+- [[UTS/Machine Learning/Sources/Lecture/Week 01|Week 01 - Intro]]
+- [[UTS/Machine Learning/Sources/Lecture/Week 02|Week 02 - Supervised Learning]]
+- [[UTS/Machine Learning/Sources/Lecture/Week 03|Week 03 - Classification]]
+- [[UTS/Machine Learning/Notes/Quiz Notes|Quiz Notes]]
+- [[UTS/Machine Learning/Notes/Exam Revision|Exam Revision]]
 
 ### Privacy Preserving Technologies
 - [[UTS/Privacy Preserving|Course Index]]
 - [[UTS/Privacy Preserving/WK1|Week 1 Materials]]
 
 ### Cloud Computing
-- [[UTS/Cloud Computing|Course Index]]
+- [[UTS/Cloud Computing Infrastructure/Notes/Cloud Computing|Course Index]]
 
 ### Career & Industry
 - [[UTS/Career/AWS|AWS Notes]]

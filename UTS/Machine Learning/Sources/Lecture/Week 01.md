@@ -23,7 +23,7 @@ Machine learning is a subset of AI where systems learn from data rather than bei
 - **Unsupervised Learning** — the model finds structure in unlabelled data. Examples: clustering, dimensionality reduction.
 - **Reinforcement Learning** — an agent learns by interacting with an environment and receiving rewards/penalties.
 
-See [[UTS/Machine Learning/Week 02]] for how supervised learning works in practice.
+See [[UTS/Machine Learning/Sources/Lecture/Week 02]] for how supervised learning works in practice.
 
 ## Key Concepts
 
@@ -38,7 +38,7 @@ See [[UTS/Machine Learning/Week 02]] for how supervised learning works in practi
 - **Underfitting** — the model is too simple to capture the underlying pattern. High bias, low variance.
 - The goal is the **bias-variance tradeoff**: find the sweet spot.
 
-> See [[UTS/Machine Learning/Exam Revision]] for a deeper treatment of bias-variance.
+> See [[UTS/Machine Learning/Notes/Exam Revision]] for a deeper treatment of bias-variance.
 
 ### Train/Test Split
 A common practice is to split data 70/30 or 80/20 for training and testing. Cross-validation (k-fold) is used when data is scarce.
@@ -63,7 +63,7 @@ A common practice is to split data 70/30 or 80/20 for training and testing. Cros
 
 ## UTS Context
 
-This course ([[UTS/Machine Learning]]) covers both theoretical foundations and practical implementation. Record your progress in [[UTS/Machine Learning/Quiz Notes]] and use [[UTS/Machine Learning/Exam Revision]] when preparing for exams.
+This course ([[UTS/Machine Learning]]) covers both theoretical foundations and practical implementation. Record your progress in [[UTS/Machine Learning/Notes/Quiz Notes]] and use [[UTS/Machine Learning/Notes/Exam Revision]] when preparing for exams.
 
 ## Related
 

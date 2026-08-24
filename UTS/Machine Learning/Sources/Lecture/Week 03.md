@@ -80,7 +80,7 @@ Finds the hyperplane that maximises the **margin** between classes. Points close
 
 ## Related
 
-- [[UTS/Machine Learning/Week 01]] — ML fundamentals and problem types
-- [[UTS/Machine Learning/Week 02]] — regression, evaluation metrics, bias-variance
-- [[UTS/Machine Learning/Quiz Notes]] — key formulas to memorise
-- [[UTS/Machine Learning/Exam Revision]] — deep dive on all algorithms
+- [[UTS/Machine Learning/Sources/Lecture/Week 01]] — ML fundamentals and problem types
+- [[UTS/Machine Learning/Sources/Lecture/Week 02]] — regression, evaluation metrics, bias-variance
+- [[UTS/Machine Learning/Notes/Quiz Notes]] — key formulas to memorise
+- [[UTS/Machine Learning/Notes/Exam Revision]] — deep dive on all algorithms
