@@ -1,0 +1,10 @@
+{
+  "id": "obsidian-zero",
+  "name": "Zero Plugin",
+  "version": "1.0.0",
+  "minAppVersion": "1.0.0",
+  "description": "Minimal test plugin",
+  "author": "test",
+  "isAvailable": true,
+  "isDesktopOnly": false
+}
