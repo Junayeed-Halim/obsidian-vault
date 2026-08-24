@@ -187,8 +187,31 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "aeb09f91fa2cd489",
+  "active": "d18ffbdf1f71b1a3",
   "lastOpenFiles": [
+    "wiki/meta/ledgers/source-ledger.json",
+    "wiki/meta/ledgers/claim-ledger.json",
+    "wiki/meta/ledgers",
+    "wiki/overview.md",
+    "wiki/meta",
+    "wiki/log.md",
+    "wiki/index.md",
+    "wiki/hot.md",
+    "wiki",
+    "inbox",
+    "Vibe Coding.md",
+    "Templates/Vibe Coding Session.md",
+    "Templates/Project.md",
+    "Templates/Meeting.md",
+    "Templates/Investment Research.md",
+    "Templates/Daily Note.md",
+    "Templates/Business Research.md",
+    "Templates",
+    "Investments.md",
+    "Home.md",
+    "Business Research.md",
+    "02 - Projects.md",
+    "01 - Daily.md",
     "2026-08-24.md",
     "Untitled.base",
     "create a link.md",
@@ -197,12 +220,6 @@
     "Untitled.canvas",
     "UTS/Internship Applications/Jun_Halim_Resume.pdf",
     "UTS/Privacy Preserving/WK1/Big_Privacy.pdf",
-    "UTS/Privacy Preserving/WK1/Lecture 1 Overview.pptx",
-    "UTS/Privacy Preserving/WK1/ScienceSurvey.pdf",
-    "UTS/Privacy Preserving/WK1",
-    "UTS/Career/Jun_Halim_Resume.pdf",
-    "UTS/SDS",
-    "UTS/New folder",
-    "UTS/Privacy Preserving"
+    "UTS/Privacy Preserving/WK1/Lecture 1 Overview.pptx"
   ]
 }
