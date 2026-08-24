@@ -1,0 +1,10 @@
+{
+  "id": "minimal-test-plugin",
+  "name": "Minimal Test",
+  "version": "1.0.0",
+  "minAppVersion": "1.0.0",
+  "description": "Test plugin to verify Obsidian loads community plugins",
+  "author": "test",
+  "isAvailable": true,
+  "isDesktopOnly": false
+}
