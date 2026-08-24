@@ -4,17 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "4f4f2792d3a21f16",
+        "id": "f4a925d2071bc8da",
         "type": "tabs",
         "children": [
           {
-            "id": "d18ffbdf1f71b1a3",
+            "id": "432159198d83777c",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Graph view"
+              "type": "markdown",
+              "state": {
+                "file": "UTS/Machine Learning/Quiz Notes.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Quiz Notes"
             }
           }
         ]
@@ -190,8 +194,21 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "d18ffbdf1f71b1a3",
+  "active": "432159198d83777c",
   "lastOpenFiles": [
+    "UTS.md",
+    "UTS/Cloud Computing.md",
+    "UTS/Privacy Preserving.md",
+    "UTS/Projects.md",
+    "UTS/Assignments.md",
+    "UTS/Career/Interviews.md",
+    "UTS/Career/Azure.md",
+    "UTS/Career/AWS.md",
+    "UTS/Machine Learning/Week 01.md",
+    "UTS/Machine Learning/Week 02.md",
+    "UTS/Machine Learning/Week 03.md",
+    "UTS/Machine Learning/Exam Revision.md",
+    "UTS/Machine Learning/Quiz Notes.md",
     "01 - Daily.md",
     "wiki/meta/ledgers/source-ledger.json",
     "wiki/meta/ledgers/claim-ledger.json",
@@ -212,13 +229,7 @@
     "Templates/Business Research.md",
     "Templates",
     "Investments.md",
-    "Home.md",
-    "Business Research.md",
-    "02 - Projects.md",
-    "2026-08-24.md",
     "Untitled.base",
-    "create a link.md",
-    "Welcome.md",
     "Untitled 1.canvas",
     "Untitled.canvas",
     "UTS/Internship Applications/Jun_Halim_Resume.pdf",
