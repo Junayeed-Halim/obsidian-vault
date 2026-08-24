@@ -190,8 +190,19 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "675a240a7ae24a49",
+  "active": "6ca11c6d315475a4",
   "lastOpenFiles": [
+    "UTS/Machine Learning/Notes/Week 01 - Introduction to Machine Learning.md",
+    "UTS/Templates",
+    "UTS/Career/Job Applications",
+    "UTS/Career/Resume",
+    "UTS/Career/Interview Questions",
+    "UTS/Career/Azure Certifications",
+    "UTS/Career/AWS Certifications",
+    "UTS/Software Development Studio/Sprint 2",
+    "UTS/Software Development Studio/Sprint 3",
+    "UTS/Software Development Studio/Sprint 1",
+    "UTS/Software Development Studio/Sources",
     "UTS/Machine Learning/Quiz Notes.md",
     "UTS.md",
     "UTS/Cloud Computing.md",
@@ -206,16 +217,10 @@
     "UTS/Machine Learning/Week 03.md",
     "UTS/Machine Learning/Exam Revision.md",
     "01 - Daily.md",
-    "wiki/meta/ledgers/source-ledger.json",
-    "wiki/meta/ledgers/claim-ledger.json",
-    "wiki/meta/ledgers",
     "wiki/overview.md",
-    "wiki/meta",
     "wiki/log.md",
     "wiki/index.md",
     "wiki/hot.md",
-    "wiki",
-    "inbox",
     "Vibe Coding.md",
     "Templates/Vibe Coding Session.md",
     "Templates/Project.md",
@@ -223,12 +228,7 @@
     "Templates/Investment Research.md",
     "Templates/Daily Note.md",
     "Templates/Business Research.md",
-    "Templates",
-    "Investments.md",
-    "Untitled.base",
     "Untitled 1.canvas",
-    "Untitled.canvas",
-    "UTS/Internship Applications/Jun_Halim_Resume.pdf",
-    "UTS/Privacy Preserving/WK1/Big_Privacy.pdf"
+    "Untitled.canvas"
   ]
 }
