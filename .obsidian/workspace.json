@@ -175,7 +175,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -191,6 +192,7 @@
   },
   "active": "d18ffbdf1f71b1a3",
   "lastOpenFiles": [
+    "01 - Daily.md",
     "wiki/meta/ledgers/source-ledger.json",
     "wiki/meta/ledgers/claim-ledger.json",
     "wiki/meta/ledgers",
@@ -213,7 +215,6 @@
     "Home.md",
     "Business Research.md",
     "02 - Projects.md",
-    "01 - Daily.md",
     "2026-08-24.md",
     "Untitled.base",
     "create a link.md",
@@ -221,7 +222,6 @@
     "Untitled 1.canvas",
     "Untitled.canvas",
     "UTS/Internship Applications/Jun_Halim_Resume.pdf",
-    "UTS/Privacy Preserving/WK1/Big_Privacy.pdf",
-    "UTS/Privacy Preserving/WK1/Lecture 1 Overview.pptx"
+    "UTS/Privacy Preserving/WK1/Big_Privacy.pdf"
   ]
 }
