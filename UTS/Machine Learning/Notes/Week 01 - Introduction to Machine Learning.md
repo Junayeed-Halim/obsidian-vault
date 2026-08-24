@@ -70,7 +70,8 @@ In plain English: the program gets better at a task as it sees more data.
 #### Supervised Learning
 The model learns from **labelled data** — each training example comes with the correct answer (the label).
 
-- **Goal:** learn a function \(f: X ightarrow y\) that maps inputs to outputs.
+- **Goal:** learn a function \(f: X 
+ightarrow y\) that maps inputs to outputs.
 - **Training:** show the model \((X, y)\) pairs; it adjusts its internal parameters to minimise the difference between its predictions and the true labels.
 - **Examples:**
   - Predicting house prices from square footage, location, number of bedrooms → **regression**.
@@ -426,7 +427,8 @@ J(	heta) = rac{1}{2m} \sum_{i=1}^{m} (h_	heta(x^{(i)}) - y^{(i)})^2
 The \(rac{1}{2}\) is purely for **convenience**. When we take the derivative with respect to \(	heta\):
 
 \[
-rac{\partial}{\partial 	heta} \left[ rac{1}{2}(h_	heta(x) - y)^2 ight] = (h_	heta(x) - y) \cdot rac{\partial h_	heta}{\partial 	heta}
+rac{\partial}{\partial 	heta} \left[ rac{1}{2}(h_	heta(x) - y)^2 
+ight] = (h_	heta(x) - y) \cdot rac{\partial h_	heta}{\partial 	heta}
 \]
 
 The 2 from the exponent cancels with the 1/2, giving a clean expression. Without the 1/2, we'd carry a factor of 2 everywhere — functionally identical, but messier. The 1/m averages over the dataset so the cost doesn't grow with dataset size.
