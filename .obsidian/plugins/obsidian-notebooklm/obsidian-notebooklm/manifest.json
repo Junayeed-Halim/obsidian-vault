@@ -1,9 +1,0 @@
-{
-  "id": "obsidian-notebooklm",
-  "name": "NotebookLM",
-  "version": "1.0.0",
-  "description": "Chat with your notes using RAG and web search. Integrates multiple LLM providers for intelligent note analysis.",
-  "author": "NYX",
-  "isDesktopOnly": false,
-  "minObsidianVersion": "1.0.0"
-}
