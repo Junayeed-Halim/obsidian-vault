@@ -15,7 +15,8 @@ This catalog is updated by completed knowledge operations.
 
 ## Sources
 
-- No sources indexed yet.
+- [[UTS/Machine Learning/Week 01|Machine Learning - Week 01]]
+- [[UTS/Privacy Preserving|Privacy Preserving Technologies]]
 
 ## Concepts
 

@@ -19,6 +19,7 @@ Welcome to your knowledge vault.
 - [[04 - Resources|Resources]]
 - [[01 - Daily|Daily Notes]]
 - [[Templates|Templates]]
+- [[UTS|UTS Courses]]
 
 ## Current Focus
 

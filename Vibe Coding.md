@@ -20,3 +20,4 @@ Notes from vibe coding sessions — exploratory coding, experiments, and AI-assi
 
 - [[Claude Code]] integration via claude-obsidian
 - [[Hermes Agent]] for orchestration
+- [[UTS/Machine Learning]] — apply ML concepts to coding experiments
