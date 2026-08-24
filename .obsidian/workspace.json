@@ -4,20 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "767f8165710db45d",
+        "id": "4f4f2792d3a21f16",
         "type": "tabs",
         "children": [
           {
-            "id": "1127707f318ccced",
+            "id": "d18ffbdf1f71b1a3",
             "type": "leaf",
             "state": {
-              "type": "bases",
-              "state": {
-                "file": "Untitled.base",
-                "viewName": "Table"
-              },
-              "icon": "lucide-table",
-              "title": "Untitled"
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "Graph view"
             }
           }
         ]
@@ -40,7 +37,7 @@
               "type": "file-explorer",
               "state": {
                 "sortOrder": "alphabetical",
-                "autoReveal": false
+                "autoReveal": true
               },
               "icon": "lucide-folder-closed",
               "title": "Files"
@@ -161,9 +158,19 @@
               "icon": "lucide-list",
               "title": "Outline of Untitled"
             }
+          },
+          {
+            "id": "aeb09f91fa2cd489",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {},
+              "icon": "git-pull-request",
+              "title": "Source Control"
+            }
           }
         ],
-        "currentTab": 4
+        "currentTab": 5
       }
     ],
     "direction": "horizontal",
@@ -181,8 +188,14 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "1127707f318ccced",
+  "active": "6ca11c6d315475a4",
   "lastOpenFiles": [
+    "2026-08-24.md",
+    "Untitled.base",
+    "create a link.md",
+    "Welcome.md",
+    "Untitled 1.canvas",
+    "Untitled.canvas",
     "UTS/Internship Applications/Jun_Halim_Resume.pdf",
     "UTS/Privacy Preserving/WK1/Big_Privacy.pdf",
     "UTS/Privacy Preserving/WK1/Lecture 1 Overview.pptx",
@@ -191,11 +204,6 @@
     "UTS/Career/Jun_Halim_Resume.pdf",
     "UTS/SDS",
     "UTS/New folder",
-    "UTS/Privacy Preserving",
-    "UTS/Career",
-    "UTS/Internship Applications",
-    "Untitled.canvas",
-    "create a link.md",
-    "Welcome.md"
+    "UTS/Privacy Preserving"
   ]
 }
