@@ -4,26 +4,6 @@
     "type": "split",
     "children": [
       {
-        "id": "dd5843b96769550e",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "339fe02eb7e85b15",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Welcome.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Welcome"
-            }
-          }
-        ]
-      },
-      {
         "id": "767f8165710db45d",
         "type": "tabs",
         "children": [
@@ -173,26 +153,17 @@
             "state": {
               "type": "outline",
               "state": {
+                "file": "Untitled.base",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline"
-            }
-          },
-          {
-            "id": "a986d0441e2097d8",
-            "type": "leaf",
-            "state": {
-              "type": "git-view",
-              "state": {},
-              "icon": "git-pull-request",
-              "title": "Source Control"
+              "title": "Outline of Untitled"
             }
           }
         ],
-        "currentTab": 5
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
@@ -210,8 +181,18 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "1127707f318ccced",
+  "active": "6ca11c6d315475a4",
   "lastOpenFiles": [
+    "UTS/Career/Jun_Halim_Resume.pdf",
+    "UTS/SDS",
+    "UTS/New folder",
+    "UTS/Privacy Preserving",
+    "UTS/Career",
+    "UTS/Internship Applications",
+    "UTS/Cloud Computing",
+    "UTS/Privacy Preserving Tech",
+    "UTS/Machine Learning",
+    "UTS",
     "Untitled.canvas",
     "Untitled.base",
     "create a link.md",
