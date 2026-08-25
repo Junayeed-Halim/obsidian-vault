@@ -11,10 +11,14 @@
             "id": "675a240a7ae24a49",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Graph view"
+              "type": "markdown",
+              "state": {
+                "file": "UTS/Privacy Preserving Technologies/Notes/Week 01 - Introduction to Privacy in the Age of Big Data.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Week 01 - Introduction to Privacy in the Age of Big Data"
             }
           }
         ]
@@ -192,17 +196,17 @@
   },
   "active": "675a240a7ae24a49",
   "lastOpenFiles": [
-    "UTS/Privacy Preserving Technologies/Sources/shannon-secrecy.pdf",
-    "UTS/Privacy Preserving Technologies/Sources/Lab/lab9.ipynb",
-    "UTS/Privacy Preserving Technologies/Sources/Lab/lab8.ipynb",
+    "UTS/Privacy Preserving Technologies/Sources/Differentially_Private_Data_Publishing_and_Analysis_A_Survey.pdf",
+    "UTS/Privacy Preserving Technologies/Sources/Deepfake Survey.pdf",
+    "UTS/Privacy Preserving Technologies/Sources/Article - A Brief History of Data Anonymization _ Aircloak.pdf",
+    "UTS/Privacy Preserving Technologies/Sources/ACM Anonymous Survey.pdf",
+    "UTS/Privacy Preserving Technologies/Sources/Big_Privacy.pdf",
     "UTS/Privacy Preserving Technologies/Sources/ScienceSurvey.pdf",
+    "UTS/Privacy Preserving Technologies/Sources/shannon-secrecy.pdf",
     "UTS/Privacy Preserving Technologies/Sources/Predicted_Packet_Padding.pdf",
-    "UTS/Privacy Preserving Technologies/Sources/PoisoningAttackSurvey.pdf",
-    "UTS/Privacy Preserving Technologies/Sources/Personalized Privacy Book.pdf",
-    "UTS/Privacy Preserving Technologies/Sources/Paper - t-Closeness Privacy Beyond k-Anonymity and l-Diversity.pdf",
-    "UTS/Privacy Preserving Technologies/Sources/Paper - Data privacy through optimal k-anonymization.pdf",
-    "UTS/Privacy Preserving Technologies/Sources/MU Survey.pdf",
     "UTS/Privacy Preserving Technologies/Sources/Local Differential Privacy Tutorial.pdf",
+    "UTS/Privacy Preserving Technologies/Sources/Article - Why 'Anonymous' Data Sometimes Isn't _ WIRED.pdf",
+    "UTS/Privacy Preserving Technologies/Sources/Lab/lab9.ipynb",
     "UTS/Privacy Preserving Technologies/Notes/Week 01 - Introduction to Privacy in the Age of Big Data.md",
     "UTS/Cloud Computing Infrastructure/Notes/Cloud Computing.md",
     "UTS/Machine Learning/Notes/Exam Revision.md",
