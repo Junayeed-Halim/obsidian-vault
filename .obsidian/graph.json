@@ -5,8 +5,66 @@
   "showAttachments": false,
   "hideUnresolved": false,
   "showOrphans": true,
-  "collapse-color-groups": false,
-  "colorGroups": [],
+  "collapse-color-groups": true,
+  "colorGroups": [
+    {
+      "name": "Machine Learning",
+      "color": "#3B82F6",
+      "rules": [
+        { "type": "contains", "value": "UTS/Machine Learning" }
+      ]
+    },
+    {
+      "name": "Privacy Preserving Technologies",
+      "color": "#8B5CF6",
+      "rules": [
+        { "type": "contains", "value": "UTS/Privacy Preserving Technologies" }
+      ]
+    },
+    {
+      "name": "Cloud Computing Infrastructure",
+      "color": "#14B8A6",
+      "rules": [
+        { "type": "contains", "value": "UTS/Cloud Computing Infrastructure" }
+      ]
+    },
+    {
+      "name": "Software Development Studio",
+      "color": "#F97316",
+      "rules": [
+        { "type": "contains", "value": "UTS/Software Development Studio" }
+      ]
+    },
+    {
+      "name": "Career",
+      "color": "#EC4899",
+      "rules": [
+        { "type": "contains", "value": "UTS/Career" }
+      ]
+    },
+    {
+      "name": "Projects",
+      "color": "#F59E0B",
+      "rules": [
+        { "type": "contains", "value": "UTS/Projects" }
+      ]
+    },
+    {
+      "name": "Internship Applications",
+      "color": "#10B981",
+      "rules": [
+        { "type": "contains", "value": "UTS/Internship Applications" }
+      ]
+    },
+    {
+      "name": "Dashboard & Index",
+      "color": "#6B7280",
+      "rules": [
+        { "type": "contains", "value": ".md" },
+        { "type": "doesnotcontain", "value": "UTS/" }
+      ]
+    }
+  ],
   "collapse-display": true,
   "showArrow": false,
   "textFadeMultiplier": 0,

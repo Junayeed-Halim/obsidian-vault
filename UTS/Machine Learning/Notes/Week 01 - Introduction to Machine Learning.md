@@ -14,7 +14,7 @@ tags:
 
 # Week 01 - Introduction to Machine Learning
 
-> **Source:** [[UTS/Machine Learning/Sources/Week 01 Lecture Notes]]
+> **Source:** [[Week 01 Lecture Notes]]
 > **Course:** [[UTS/Machine Learning|Machine Learning]]
 > **Next:** [[UTS/Machine Learning/Notes/Week 02 - Supervised Learning & Model Evaluation]]
 
@@ -380,9 +380,9 @@ ML is not a magic solution. Avoid ML when:
 - [[UTS/Machine Learning/Notes/Week 03 - Classification Algorithms]] — classification algorithms (logistic regression, k-NN, decision trees, SVM)
 - [[UTS/Machine Learning/Quiz Prep/Week 01 Quiz Prep]] — practice questions
 - [[UTS/Machine Learning/Weekly Summaries/Week 01 Summary]] — weekly summary
-- [[UTS/Machine Learning/Sources/Week 01 Lecture Notes]] — source material
+- [[Week 01 Lecture Notes]] — source material
 - [[UTS/Machine Learning/Assignments/ML Assignment 1]] — first assignment (when released)
-- [[UTS/Career/Interview Questions/ML Interview Questions]] — ML interview prep
+- [[UTS/Career/Interviews]] — ML interview prep
 - [[UTS/Career/AWS|AWS]] — cloud ML (SageMaker)
 - [[UTS/Career/Azure|Azure]] — cloud ML (Azure ML)
 
@@ -639,8 +639,8 @@ plt.show()
 
 ## 16. Sources
 
-- [[UTS/Machine Learning/Sources/Week 01 Lecture Notes]] — primary lecture material
-- [[UTS/Machine Learning/Sources/Week 01 Reading List]] — recommended readings
+- [[Week 01 Lecture Notes]] — primary lecture material
+- [[Week 01 Reading List]] — recommended readings
 - Big Privacy (Yu, 2016) — contextual reading on data privacy in ML: [[UTS/Privacy Preserving Technologies/Sources/Big Privacy - Yu 2016]]
 - [[UTS/Software Development Studio/Meeting Notes/Week 01 Standup]] — SDS context (if applicable)
 
