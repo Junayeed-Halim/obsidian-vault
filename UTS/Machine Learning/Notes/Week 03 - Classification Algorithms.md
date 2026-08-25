@@ -14,7 +14,7 @@ tags:
 
 # Week 03 - Classification Algorithms
 
-> **Source:** [[UTS/Machine Learning/Sources/Week 03 Lecture Notes]]
+> **Source:** [[Week 03 Lecture Notes]]
 > **Prerequisites:** [[UTS/Machine Learning/Notes/Week 01 - Introduction to Machine Learning]], [[UTS/Machine Learning/Notes/Week 02 - Supervised Learning & Model Evaluation]]
 > **Next:** [[UTS/Machine Learning/Quiz Prep/Week 03 Quiz Prep]]
 
@@ -878,7 +878,7 @@ So the decision boundary is the hyperplane \(\theta^T x = 0\). Predict class 1 w
 - [[UTS/Machine Learning/Notes/Week 02 - Supervised Learning & Model Evaluation]] — regression, evaluation metrics, bias-variance
 - [[UTS/Machine Learning/Quiz Prep/Week 03 Quiz Prep]] — practice questions
 - [[UTS/Machine Learning/Weekly Summaries/Week 03 Summary]] — weekly summary
-- [[UTS/Machine Learning/Sources/Week 03 Lecture Notes]] — source material
+- [[Week 03 Lecture Notes]] — source material
 - [[UTS/Machine Learning/Assignments/ML Assignment 1]] — assignment (when released)
 - [[UTS/Career/Interview Questions/ML Interview Questions]] — interview prep
 
@@ -1248,9 +1248,9 @@ for email, pred, prob in zip(new_emails, predictions, probabilities):
 
 ## 16. Sources
 
-- [[UTS/Machine Learning/Sources/Week 03 Lecture Notes]] — primary lecture material
+- [[Week 03 Lecture Notes]] — primary lecture material
 - [[UTS/Machine Learning/Sources/Week 03 Reading List]] — recommended readings
-- [[UTS/Machine Learning/Sources/Week 02 Lecture Notes]] — prerequisite Week 02 material
+- [[Week 02 Lecture Notes]] — prerequisite Week 02 material
 - [[UTS/Career/Interview Questions/ML Interview Questions]] — related interview prep
 
 ---

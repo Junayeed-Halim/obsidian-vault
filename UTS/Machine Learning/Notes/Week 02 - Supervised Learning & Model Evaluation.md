@@ -14,7 +14,7 @@ tags:
 
 # Week 02 - Supervised Learning & Model Evaluation
 
-> **Source:** [[UTS/Machine Learning/Sources/Week 02 Lecture Notes]]
+> **Source:** [[Week 02 Lecture Notes]]
 > **Prerequisites:** [[UTS/Machine Learning/Notes/Week 01 - Introduction to Machine Learning]]
 > **Next:** [[UTS/Machine Learning/Notes/Week 03 - Classification Algorithms]]
 
@@ -651,7 +651,7 @@ pipeline.fit(X_train, y_train)
 - [[UTS/Machine Learning/Notes/Week 03 - Classification Algorithms]] — next week
 - [[UTS/Machine Learning/Quiz Prep/Week 02 Quiz Prep]] — practice questions
 - [[UTS/Machine Learning/Weekly Summaries/Week 02 Summary]] — weekly summary
-- [[UTS/Machine Learning/Sources/Week 02 Lecture Notes]] — source material
+- [[Week 02 Lecture Notes]] — source material
 - [[UTS/Machine Learning/Assignments/ML Assignment 1]] — assignment (when released)
 - [[UTS/Career/Interview Questions/ML Interview Questions]] — interview prep
 
@@ -1019,9 +1019,9 @@ plt.show()
 
 ## 16. Sources
 
-- [[UTS/Machine Learning/Sources/Week 02 Lecture Notes]] — primary lecture material
+- [[Week 02 Lecture Notes]] — primary lecture material
 - [[UTS/Machine Learning/Sources/Week 02 Reading List]] — recommended readings
-- [[UTS/Machine Learning/Sources/Week 01 Lecture Notes]] — prerequisite Week 01 material
+- [[Week 01 Lecture Notes]] — prerequisite Week 01 material
 - [[UTS/Career/Interview Questions/ML Interview Questions]] — related interview prep
 
 ---
