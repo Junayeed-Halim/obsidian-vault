@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "0bb47100983d8b83",
+        "id": "2c77c2dcf2daaea6",
         "type": "tabs",
         "children": [
           {
-            "id": "bd584b919219b3dc",
+            "id": "25937f85ff787d26",
             "type": "leaf",
             "state": {
               "type": "graph",
@@ -76,8 +76,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "818c17bbbbd270d5",
@@ -191,14 +190,14 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "bd584b919219b3dc",
+  "active": "25937f85ff787d26",
   "lastOpenFiles": [
+    "UTS.md",
     "UTS/Machine Learning/Sources/Week 03 Lecture Notes.md",
     "UTS/Machine Learning/Sources/Week 02 Lecture Notes.md",
     "UTS/Machine Learning/Sources/Week 01 Reading List.md",
     "UTS/Machine Learning/Sources/Week 01 Lecture Notes.md",
     "Investments.md",
-    "UTS.md",
     "Home.md",
     "Vibe Coding.md",
     "Untitled.base",
