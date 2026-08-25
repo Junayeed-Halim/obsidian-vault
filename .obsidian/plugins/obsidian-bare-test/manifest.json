@@ -1,0 +1,9 @@
+{
+  "id": "obsidian-bare-test",
+  "name": "Bare Test",
+  "version": "1.0.0",
+  "description": "Minimal test to verify Obsidian loads plugins",
+  "author": "test",
+  "isDesktopOnly": false,
+  "minAppVersion": "1.0.0"
+}

@@ -1,5 +1,6 @@
 {
   "enabledCssSnippets": [
-    "vault-colors"
+    "vault-colors",
+    "graph-style"
   ]
 }

@@ -1,0 +1,1 @@
+**Week 8 Lab manual: [Week8Lab.pdf](https://canvas.uts.edu.au/courses/42080/files/12780435?verifier=kkZPDPrN8xHvvDk5DvYTOlJgwS1qYbgjL8fKX70p&wrap=1)**

@@ -1,0 +1,1 @@
+If you are having trouble accessing information on this page, visit the [Important Guidance page on the UTS website (opens in new window)](https://www.uts.edu.au/for-students/current-students/managing-your-course/important-guidance).

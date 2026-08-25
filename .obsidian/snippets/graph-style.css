@@ -1,0 +1,188 @@
+/*
+ * Graph View — Clean & Organized
+ * Enable: Settings → Appearance → CSS snippets → toggle "graph-style" ON
+ *
+ * Obsidian graph DOM structure:
+ *   <svg> → <g class="graph-container"> → <g class="graph-links"> (lines)
+ *                                  → <g class="graph-atoms"> (node groups)
+ * Each node: <g class="graph-node" data-path="...">
+ *   → <circle class="node-circle">
+ *   → <text class="node-label">
+ * Each link: <line class="graph-link">
+ */
+
+/* ── Reduce link opacity so clusters stand out ── */
+.graph-view .graph-links line {
+  stroke: var(--text-muted);
+  stroke-width: 0.6;
+  opacity: 0.12;
+}
+
+/* Brighter on hover */
+.graph-view .graph-links line:hover {
+  opacity: 0.3;
+}
+
+/* ── Node circles — default style ── */
+.graph-view .graph-atoms .graph-node circle {
+  fill: var(--text-muted);
+  opacity: 0.55;
+  stroke: var(--background);
+  stroke-width: 1px;
+  transition: fill 0.15s, opacity 0.15s, r 0.15s;
+}
+
+/* ── Node labels — readable with text outline ── */
+.graph-view .graph-atoms .graph-node text {
+  font-size: 10px;
+  font-weight: 500;
+  fill: var(--text-muted);
+  opacity: 0.85;
+  /* Paint order: stroke first, then fill — gives text an outline */
+  paint-order: stroke;
+  stroke: var(--background);
+  stroke-width: 3px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* ── Focused / hovered node ── */
+.graph-view .graph-atoms .graph-node.focused circle {
+  stroke: var(--accent);
+  stroke-width: 2px;
+  opacity: 1;
+}
+
+.graph-view .graph-atoms .graph-node:hover circle {
+  stroke: var(--accent);
+  stroke-width: 2px;
+}
+
+.graph-view .graph-atoms .graph-node.focused text,
+.graph-view .graph-atoms .graph-node:hover text {
+  fill: var(--accent);
+  opacity: 1;
+}
+
+/* ── Orphan nodes — dimmer, smaller ── */
+.graph-view .graph-atoms .graph-node.orphan circle {
+  fill: var(--text-muted);
+  opacity: 0.18;
+}
+
+.graph-view .graph-atoms .graph-node.orphan text {
+  opacity: 0.22;
+  font-size: 8px;
+}
+
+/* ── Root nodes ── */
+.graph-view .graph-atoms .graph-node.root circle {
+  opacity: 0.85;
+}
+
+/* ── Subject colour coding ──
+   Each node <g> carries a data-path attribute with the full file path.
+   We use CSS attribute selectors [*="/Folder/"] to match.
+   Order matters: more specific paths must come BEFORE general ones.
+   ──────────────────────────────────────────────────────────── */
+
+/* === UTS Subjects (distinct colours) === */
+
+/* Machine Learning — blue */
+.graph-view .graph-atoms .graph-node[data-path*="/Machine Learning/"] circle {
+  fill: #2196f3;
+  opacity: 0.8;
+}
+.graph-view .graph-atoms .graph-node[data-path*="/Machine Learning/"] text {
+  fill: #2196f3;
+  opacity: 0.9;
+}
+
+/* Privacy Preserving Technologies — pink */
+.graph-view .graph-atoms .graph-node[data-path*="/Privacy Preserving Technologies/"] circle {
+  fill: #e91e63;
+  opacity: 0.8;
+}
+.graph-view .graph-atoms .graph-node[data-path*="/Privacy Preserving Technologies/"] text {
+  fill: #e91e63;
+  opacity: 0.9;
+}
+
+/* Cloud Computing Infrastructure — cyan */
+.graph-view .graph-atoms .graph-node[data-path*="/Cloud Computing Infrastructure/"] circle {
+  fill: #00bcd4;
+  opacity: 0.8;
+}
+.graph-view .graph-atoms .graph-node[data-path*="/Cloud Computing Infrastructure/"] text {
+  fill: #00bcd4;
+  opacity: 0.9;
+}
+
+/* Software Development Studio — orange */
+.graph-view .graph-atoms .graph-node[data-path*="/Software Development Studio/"] circle {
+  fill: #ff9800;
+  opacity: 0.8;
+}
+.graph-view .graph-atoms .graph-node[data-path*="/Software Development Studio/"] text {
+  fill: #ff9800;
+  opacity: 0.9;
+}
+
+/* === Other areas === */
+
+/* Career — green */
+.graph-view .graph-atoms .graph-node[data-path*="/Career/"] circle {
+  fill: #4caf50;
+  opacity: 0.75;
+}
+.graph-view .graph-atoms .graph-node[data-path*="/Career/"] text {
+  fill: #4caf50;
+  opacity: 0.85;
+}
+
+/* wiki — purple */
+.graph-view .graph-atoms .graph-node[data-path*="/wiki/"] circle {
+  fill: #ce93d8;
+  opacity: 0.75;
+}
+
+/* Templates — orange */
+.graph-view .graph-atoms .graph-node[data-path*="/Templates/"] circle {
+  fill: #ffb74d;
+  opacity: 0.75;
+}
+
+/* Daily / Projects / Inbox / Areas / Resources — amber */
+.graph-view .graph-atoms .graph-node[data-path*="/01 - Daily/"] circle,
+.graph-view .graph-atoms .graph-node[data-path*="/02 - Projects/"] circle,
+.graph-view .graph-atoms .graph-node[data-path*="/00 - Inbox/"] circle,
+.graph-view .graph-atoms .graph-node[data-path*="/03 - Areas/"] circle,
+.graph-view .graph-atoms .graph-node[data-path*="/04 - Resources/"] circle {
+  fill: #ffd54f;
+  opacity: 0.7;
+}
+
+/* Investments / Business Research / Vibe Coding — teal */
+.graph-view .graph-atoms .graph-node[data-path*="/Investments/"] circle,
+.graph-view .graph-atoms .graph-node[data-path*="/Business Research/"] circle {
+  fill: #4db6ac;
+  opacity: 0.75;
+}
+
+/* Home.md — accent hub */
+.graph-view .graph-atoms .graph-node[data-path="Home.md"] circle {
+  fill: var(--accent);
+  opacity: 1;
+}
+.graph-view .graph-atoms .graph-node[data-path="Home.md"] text {
+  fill: var(--accent);
+  opacity: 1;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+/* === Fallback for any un-matched nodes === */
+.graph-view .graph-atoms .graph-node circle {
+  fill: var(--text-muted);
+  opacity: 0.55;
+}

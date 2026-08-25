@@ -1,0 +1,1 @@
+If you are having trouble accessing information on this page visit the [Getting started with UTS Library](https://lib.uts.edu.au/library-canvas) on UTS Library (opens a UTS website in a new window).

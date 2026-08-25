@@ -1,0 +1,9 @@
+{
+  "id": "minimal-notebooklm-test",
+  "name": "Minimal NotebookLM Test",
+  "version": "1.0.0",
+  "description": "Minimal test to diagnose load failure",
+  "author": "test",
+  "isDesktopOnly": false,
+  "minAppVersion": "1.0.0"
+}

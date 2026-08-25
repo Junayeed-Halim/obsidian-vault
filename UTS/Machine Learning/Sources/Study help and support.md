@@ -1,0 +1,1 @@
+If you are having trouble accessing information on this page, visit the [Study Help and Support page on the UTS website (opens in new window)](https://www.uts.edu.au/for-students/current-students/managing-your-course/study-help-and-support).
