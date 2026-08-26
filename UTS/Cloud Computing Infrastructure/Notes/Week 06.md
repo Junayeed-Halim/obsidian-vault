@@ -265,6 +265,6 @@ Same 4-tier structure (Tier I-IV) with similar descriptions, but TIA-942 is more
 ## Related
 
 - [[Week 05]] — Week 5 Data Centre fundamentals and virtualisation
-- [[UTS/Cloud Computing Infrastructure/Lecture - Notes/Week 03]] — Week 3 cloud management mechanisms (parallel concepts)
+- [[UTS/Cloud Computing Infrastructure/Notes/Week 03]] — Week 3 cloud management mechanisms (parallel concepts)
 - [[UTS/Cloud Computing Infrastructure/Exam Prep]] — exam hub
 - [[UTS/Cloud Computing Infrastructure/Quiz Prep/Week 06 Quiz Prep]] — practice questions

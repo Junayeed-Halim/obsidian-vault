@@ -27,7 +27,7 @@ University of Technology Sydney course notes and materials.
 - [[UTS/Privacy Preserving/WK1|Week 1 Materials]]
 
 ### Cloud Computing
-- [[UTS/Cloud Computing Infrastructure/Notes/Cloud Computing|Course Index]]
+- [[Cloud Computing|Course Index]]
 
 ### Career & Industry
 - [[UTS/Career/AWS|AWS Notes]]

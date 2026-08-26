@@ -237,6 +237,6 @@ Key properties:
 ## Related
 
 - [[Week 01-03]] — Weeks 1-3 foundation
-- [[UTS/Cloud Computing Infrastructure/Lecture - Notes/Week 03]] — Week 3 management mechanisms
+- [[UTS/Cloud Computing Infrastructure/Notes/Week 03]] — Week 3 management mechanisms
 - [[UTS/Cloud Computing Infrastructure/Exam Prep]] — exam hub
 - [[UTS/Cloud Computing Infrastructure/Quiz Prep/Weeks 01-03 Quiz Prep]] — practice questions

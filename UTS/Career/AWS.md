@@ -13,7 +13,7 @@ tags:
 
 # AWS - Cloud Computing Notes
 
-Amazon Web Services (AWS) is the leading cloud platform. These notes cover core services relevant to [[UTS/Cloud Computing Infrastructure/Notes/Cloud Computing]] and career preparation.
+Amazon Web Services (AWS) is the leading cloud platform. These notes cover core services relevant to [[Cloud Computing]] and career preparation.
 
 ---
 
@@ -105,4 +105,4 @@ Six pillars:
 
 - [[UTS/Career/Azure]] — Microsoft's cloud platform
 - [[UTS/Career/Interviews]] — cloud interview questions
-- [[UTS/Cloud Computing Infrastructure/Notes/Cloud Computing]] — course materials
+- [[Cloud Computing]] — course materials
