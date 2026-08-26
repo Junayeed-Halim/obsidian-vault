@@ -11,10 +11,14 @@
             "id": "cbe5e6b9e56904ff",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Graph view"
+              "type": "markdown",
+              "state": {
+                "file": "UTS/Cloud Computing Infrastructure/Assignments/Assignment 1 Working.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Assignment 1 Working"
             }
           }
         ]
@@ -206,6 +210,7 @@
   },
   "active": "cbe5e6b9e56904ff",
   "lastOpenFiles": [
+    "UTS/Cloud Computing Infrastructure/Assignments/Assignment 1.md",
     "UTS/Projects.md",
     "UTS/Canvas Workflow.md",
     "UTS/Machine Learning.md",
@@ -233,7 +238,6 @@
     "UTS/Cloud Computing Infrastructure/Quiz Prep/Weeks 01-03 Quiz Prep.md",
     "UTS/Cloud Computing Infrastructure/Quiz Prep/Week 04 Quiz Prep.md",
     "UTS/Cloud Computing Infrastructure/Assignments/41891_42891_Assignment-1.pdf",
-    "UTS/Cloud Computing Infrastructure/Assignments/Assignment 1.md",
     "UTS/Cloud Computing Infrastructure/Assignments 1/41891_42891_Assignment-1.pdf",
     "UTS/Cloud Computing Infrastructure/Assignments 1/Assignment 1.md",
     "UTS/Cloud Computing Infrastructure/Assignments 1",
