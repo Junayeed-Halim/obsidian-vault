@@ -11,10 +11,40 @@
             "id": "25937f85ff787d26",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Graph view"
+              "type": "markdown",
+              "state": {
+                "file": "UTS/Assignments.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Assignments"
+            }
+          },
+          {
+            "id": "315c4c9dee81fbf1",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "UTS/Cloud Computing Infrastructure/Assignments/Assignment 1.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Assignment 1"
+            }
+          },
+          {
+            "id": "d088ca8d12579beb",
+            "type": "leaf",
+            "state": {
+              "type": "pdf",
+              "state": {
+                "file": "UTS/Cloud Computing Infrastructure/Assignments/41891_42891_Assignment-1.pdf"
+              },
+              "icon": "lucide-file-text",
+              "title": "41891_42891_Assignment-1"
             }
           }
         ]
@@ -92,6 +122,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "UTS/Assignments.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -169,14 +200,24 @@
               "icon": "git-pull-request",
               "title": "Source Control"
             }
+          },
+          {
+            "id": "ca13a51195f7c749",
+            "type": "leaf",
+            "state": {
+              "type": "file-properties",
+              "state": {
+                "file": "UTS/Assignments.md"
+              },
+              "icon": "lucide-info",
+              "title": "File properties"
+            }
           }
-        ],
-        "currentTab": 5
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -190,44 +231,44 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "25937f85ff787d26",
+  "active": "e3a0a85e3506de9a",
   "lastOpenFiles": [
-    "Templates/Vibe Coding Session.md",
-    "Templates/Project.md",
-    "Templates/Meeting.md",
-    "Templates/Investment Research.md",
-    "Templates/Daily Note.md",
-    "Templates/Business Research.md",
+    "UTS/Cloud Computing Infrastructure/Weekly Summaries/Week 02 Summary.md",
+    "UTS/Cloud Computing Infrastructure/Weekly Summaries/Week 03 Summary.md",
+    "UTS/Cloud Computing Infrastructure/Assignments 1/41891_42891_Assignment-1.pdf",
+    "UTS/Cloud Computing Infrastructure/Assignments 1/Assignment 1.md",
+    "UTS/Cloud Computing Infrastructure/Assignments 1",
+    "UTS/Cloud Computing Infrastructure/Assignments/Assignment 1.md",
+    "UTS/Machine Learning.md",
     "UTS/Assignments.md",
-    "UTS/Privacy Preserving.md",
-    "UTS/Privacy Preserving/Notes/Week 01 - Introduction to Privacy in the Age of Big Data.md",
-    "UTS/Machine Learning/Sources/Lecture/Week 03.md",
-    "UTS/Machine Learning/Sources/Lecture/Week 02.md",
-    "UTS/Machine Learning/Sources/Lecture/Week 01.md",
-    "UTS/Machine Learning/Sources/Week 03 Lecture Notes.md",
-    "UTS/Machine Learning/Sources/Week 02 Lecture Notes.md",
-    "UTS/Machine Learning/Sources/Week 01 Reading List.md",
-    "UTS/Machine Learning/Sources/Week 01 Lecture Notes.md",
-    "UTS/Cloud Computing Infrastructure/Lecutre/Week3_CloudLecture-3.pdf",
-    "UTS/Cloud Computing Infrastructure/Lecutre/Week2_CloudLecture-5.pdf",
-    "UTS/Cloud Computing Infrastructure/Lecutre/UTS Cloud Lecture 1-3.pdf",
-    "UTS/Cloud Computing Infrastructure/Lecutre/Week4_CloudLecture-5.pdf",
-    "UTS/Cloud Computing Infrastructure/Lecutre/Week4_CloudLecture-5.pdf.crdownload",
-    "UTS/Cloud Computing Infrastructure/Lecutre/Week5_Cloud Lecture.pdf",
-    "UTS/Cloud Computing Infrastructure/Lecutre/Week5_Cloud Lecture.pdf.crdownload",
-    "UTS/Cloud Computing Infrastructure/Lecutre/Week6_CloudLecture-2.pdf",
-    "UTS/Cloud Computing Infrastructure/Lecutre/Week6_CloudLecture-2.pdf.crdownload",
-    "UTS/Cloud Computing Infrastructure/Lecutre/Week3_CloudLecture-3.pdf.crdownload",
-    "UTS.md",
-    "Investments.md",
-    "Home.md",
-    "Vibe Coding.md",
-    "UTS/Cloud Computing Infrastructure/Sources/Lab/Week 9 Lab (Lab 8)_ Preparation for Assignment 2  and Schedule for Presentation.md",
-    "UTS/Machine Learning/Sources/Lecture/ENS.2b_ Understand Resampling and the Randomness in Learning.md",
-    "UTS/Cloud Computing Infrastructure/Sources/Lab/Week 8 Lab (Lab 7)_ ESXi Install and Host Profile.md",
-    "UTS/Cloud Computing Infrastructure/Sources/Lab/Week 6 Lab (Lab 5)_ Resources.md",
-    "UTS/Cloud Computing Infrastructure/Sources/Lab/Week 4 Lab (Lab 3)_ vCenter Server and VM migration.md",
-    "UTS/Cloud Computing Infrastructure/Sources/Lab/Week 5 Lab (Lab 4)_ vSwitches and Port groups.md",
+    "UTS/Cloud Computing Infrastructure/Weekly Summaries/Week 05 Summary.md",
+    "UTS/Cloud Computing Infrastructure/Weekly Summaries/Week 06 Summary.md",
+    "UTS/Cloud Computing Infrastructure/Weekly Summaries/Week 04 Summary.md",
+    "UTS/Cloud Computing Infrastructure/Assignments/41891_42891_Assignment-1.pdf",
+    "UTS/Cloud Computing Infrastructure/Quiz Prep/Week 05 Quiz Prep.md",
+    "UTS/Cloud Computing Infrastructure/Quiz Prep/Week 06 Quiz Prep.md",
+    "UTS/Cloud Computing Infrastructure/Quiz Prep/Week 04 Quiz Prep.md",
+    "UTS/Cloud Computing Infrastructure/Labs/vCert-6.1.2-20260713/Week 5 lab - proper Guide.md",
+    "UTS/Cloud Computing Infrastructure/Assignments/41891_42891_Assignment-1 (1).pdf.crdownload",
+    "UTS/Cloud Computing Infrastructure/Sources/Lecture/Week 06.md",
+    "UTS/Cloud Computing Infrastructure/Sources/Lecture/Week 04.md",
+    "UTS/Cloud Computing Infrastructure/Sources/Lecture/Week 05.md",
+    "UTS/Cloud Computing Infrastructure/Sources/Lecture/Week 03.md",
+    "UTS/Cloud Computing Infrastructure/Sources/Lecture/Week 02.md",
+    "02 - Projects.md",
+    "01 - Daily.md",
+    "UTS/Projects.md",
+    "UTS/Cloud Computing Infrastructure/Labs/Week5Lab-2023.pdf",
+    "UTS/Cloud Computing Infrastructure/Weekly Summaries/Week 01-03 Summary.md",
+    "UTS/Cloud Computing Infrastructure/Quiz Prep/Weeks 01-03 Quiz Prep.md",
+    "UTS/Cloud Computing Infrastructure/Sources/Lecture/Week 01-03.md",
+    "UTS/Cloud Computing Infrastructure/Exam Prep.md",
+    "UTS/Cloud Computing Infrastructure/Lecture/Week6_CloudLecture-2.pdf",
+    "UTS/Cloud Computing Infrastructure/Lecture/Week5_Cloud Lecture.pdf",
+    "UTS/Cloud Computing Infrastructure/Lecture/Week4_CloudLecture-5.pdf",
+    "UTS/Cloud Computing Infrastructure/Lecture/Week3_CloudLecture-3.pdf",
+    "UTS/Cloud Computing Infrastructure/Lecture/Week2_CloudLecture-5.pdf",
+    "Templates/Vibe Coding Session.md",
     "Untitled 1.canvas",
     "Untitled.canvas"
   ]
