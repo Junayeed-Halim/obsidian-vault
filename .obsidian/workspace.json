@@ -11,10 +11,14 @@
             "id": "cbe5e6b9e56904ff",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "UTS/Cloud Computing Infrastructure/Weekly Summaries/Week 04 Summary.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "Week 04 Summary"
             }
           }
         ]
@@ -92,6 +96,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "UTS/Cloud Computing Infrastructure/Weekly Summaries/Week 04 Summary.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,6 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "UTS/Cloud Computing Infrastructure/Weekly Summaries/Week 04 Summary.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
@@ -175,7 +181,9 @@
             "type": "leaf",
             "state": {
               "type": "file-properties",
-              "state": {},
+              "state": {
+                "file": "UTS/Cloud Computing Infrastructure/Weekly Summaries/Week 04 Summary.md"
+              },
               "icon": "lucide-info",
               "title": "File properties"
             }
@@ -202,6 +210,10 @@
   },
   "active": "cbe5e6b9e56904ff",
   "lastOpenFiles": [
+    "UTS/Cloud Computing Infrastructure/Weekly Summaries/Week 03 Summary.md",
+    "UTS/Cloud Computing Infrastructure/Weekly Summaries/Week 02 Summary.md",
+    "UTS/Cloud Computing Infrastructure/Weekly Summaries/Week 01-03 Summary.md",
+    "UTS/Cloud Computing Infrastructure/Notes/Cloud Computing.md",
     "UTS/Cloud Computing Infrastructure/Sources/Lecture/Week 02.md",
     "UTS/Cloud Computing Infrastructure/Lecture/Week2_CloudLecture-5.pdf",
     "UTS/Cloud Computing Infrastructure/Lecture/Week6_CloudLecture-2.pdf",
@@ -210,13 +222,10 @@
     "UTS/Cloud Computing Infrastructure/Lecture/UTS Cloud Lecture 1-3.pdf",
     "UTS/Cloud Computing Infrastructure/Quiz Prep/Weeks 01-03 Quiz Prep.md",
     "UTS/Cloud Computing Infrastructure/Quiz Prep/Week 04 Quiz Prep.md",
-    "UTS/Cloud Computing Infrastructure/Notes/Cloud Computing.md",
     "UTS/Assignments.md",
     "UTS/Canvas Workflow.md",
     "UTS/Cloud Computing Infrastructure/Assignments/41891_42891_Assignment-1.pdf",
     "UTS/Cloud Computing Infrastructure/Assignments/Assignment 1.md",
-    "UTS/Cloud Computing Infrastructure/Weekly Summaries/Week 02 Summary.md",
-    "UTS/Cloud Computing Infrastructure/Weekly Summaries/Week 03 Summary.md",
     "UTS/Cloud Computing Infrastructure/Assignments 1/41891_42891_Assignment-1.pdf",
     "UTS/Cloud Computing Infrastructure/Assignments 1/Assignment 1.md",
     "UTS/Cloud Computing Infrastructure/Assignments 1",
