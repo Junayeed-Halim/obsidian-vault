@@ -1,7 +1,7 @@
 ---
 type: course
 course: Cloud Computing
-title: Week 04 Summary — Cloud Networking, CDN, DNS
+title: Week 04 Summary — Network Virtualization, NaaS
 status: evergreen
 created: 2026-08-26
 tags:
@@ -12,79 +12,137 @@ tags:
   - cloud-computing
 ---
 
-# Week 04 Summary — Cloud Networking, CDN, DNS, Content Delivery
+# Week 04 Summary — Network Virtualization, NaaS
 
-> **Based on:** [[UTS/Cloud Computing Infrastructure/Sources/Lecture/Week 04]]
+> **Source:** [[UTS/Cloud Computing Infrastructure/Sources/Lecture/Week 04]]
 > **Course:** [[UTS/Cloud Computing Infrastructure/Exam Prep|Cloud Computing Infrastructure]]
+> **Lecturer:** Haimin Zhang
 
 ---
 
 ## What We Covered
 
-### 1. Advanced VPC/VNet Networking
+### Building IaaS Environment
 
-- **Subnet design:** Public subnets (route to Internet Gateway) vs private subnets (no direct internet access, use NAT for outbound).
-- **Route tables:** Control traffic flow within and outside the VPC. Each subnet has a route table.
-- **VPC Peering:** Direct network connection between two VPCs. Enables private IP communication across VPCs. **Not transitive** — each peering is a direct link.
-- **Transit Gateway:** Hub-and-spoke model for connecting many VPCs and on-prem networks. Centralised routing, transitive.
-- **VPN / Direct Connect / ExpressRoute:** Connecting on-premises to cloud. VPN = encrypted over internet. Direct Connect = dedicated physical connection, more reliable, lower latency.
+Fundamental IT resources delivered in standard IaaS architecture:
 
-### 2. Content Delivery Networks (CDN)
+- **Virtual server**
+- **Cloud storage**
+- **Virtual network**
 
-- **Purpose:** Cache content at edge locations close to users. Reduces latency, offloads origin, improves user experience globally.
-- **How it works:** User → nearest edge cache → cache HIT (serve instantly) or cache MISS (fetch from origin, cache, serve). TTL controls how long content stays cached.
-- **AWS:** CloudFront. **Azure:** Azure CDN / Front Door.
-- **Use cases:** Static assets (images, CSS, JS), video streaming, accelerating dynamic content, DDoS protection at the edge.
-- **Key insight:** CDNs are most effective when content is cacheable and users are geographically distributed. For dynamic personalised content, CDN benefits are limited.
+Standardised configurations defined by: hardware, operating software/system, processors and memory, servers/cloud storage, virtualized network.
 
-### 3. DNS in the Cloud
+### Broadband Networks and Internet Architecture
 
-- **Managed DNS:** Route 53 (AWS), Azure DNS. Highly available, programmable, integrates with other cloud services.
-- **Record types:** A (IPv4), AAAA (IPv6), CNAME (alias to another domain), MX (mail), TXT (verification/SPF), Alias (AWS-specific — points to AWS resources without a fixed IP).
-- **Routing policies:**
-  - **Simple:** Single resource, basic DNS.
-  - **Weighted:** Split traffic by percentage (A/B testing, gradual rollouts).
-  - **Latency-based:** Route to the region with lowest network latency for that user.
-  - **Geolocation:** Route based on user's geographic location. Compliance, localisation.
-  - **Failover:** Active-passive. Primary region serves traffic; if health check fails, DNS routes to secondary.
-- **Health checks:** Monitor endpoint health. DNS failover depends on health checks to detect when to switch.
+- All cloud must be connected to a network
+- Internetworks allow remote provisioning of IT resources — fundamental to cloud
+- Internet's largest backbone networks established by ISPs, interconnected by routers connecting multinational networks
 
-### 4. Private vs Public Subnets — Deep Dive
+### Internet Structure: Network of Networks
 
-- **Public subnet:** Has a route to an Internet Gateway (IGW). Resources here can be directly reached from the internet (if security groups allow). Use for load balancers, NAT gateways, bastion hosts.
-- **Private subnet:** No route to IGW. Resources here are NOT directly reachable from the internet. Use for databases, application servers, backend services. Outbound internet access via NAT Gateway in a public subnet.
-- **DMZ pattern:** Place public-facing resources in a DMZ subnet, backend in private subnets. Reduces attack surface.
+| Tier | Description | Examples |
+|------|-------------|----------|
+| **Tier-1 ISPs** | Internet Backbone networks — international coverage. Top of hierarchy. | Verizon, Sprint, AT&T, Cable and Wireless |
+| **Tier-2 ISPs** | Regional or national coverage. Peer with other Tier-2, purchase transit from Tier-1. | Regional providers |
+| **Tier-3 ISPs** | Local network of an organisation with hosts connected to it. Last mile to end users. | Local providers, corporate networks |
+
+### Network Virtualization
+
+**Definition:** Creation of multiple virtual networks on the same physical substrate. Each virtual network is a collection of virtual nodes and virtual links, a subset of underlying physical network resources, co-existing with but isolated from other virtual networks.
+
+### VMware Virtual Networking Concepts
+
+**Virtual Network Adapter (vNIC):**
+- Emulates a NIC in software — implements all NIC functions without real hardware
+- Each vNIC has a unique MAC address
+- Completely decoupled from hardware NIC
+
+**Virtual Switch (vSwitch):**
+- Software switch — forwards frames based on destination MAC
+- Forwards frames between vNIC and pNIC (physical NIC)
+- pNIC shared by all vNICs on same vSwitch
+- Packet dispatched to: another VM's port (VM-VM, stays within host) OR uplink pNIC's port (VM-Uplink, goes to physical network)
+- Optional: bandwidth management, security filters, uplink NIC teaming
+
+**Virtual ports, Uplink ports, Uplinks:**
+- Virtual ports: logical connection points among virtual devices and between virtual and physical devices
+- Uplink ports: ports associated with physical adapters, connecting virtual network to physical network
+- Uplinks: Physical Ethernet adapters as bridges between virtual and physical networks
+
+### Data Center Network Design
+
+**Before VMs — Physical rack design:**
+- Top of Rack (ToR) switch: each rack (20-40 servers) has 48-port ToR switch
+- Servers in rack connect to ToR switch
+- Data centres don't rewire without good reason — physical wiring is static
+
+**After VMs — Two problems:**
+
+**Problem 1: Isolation**
+- All VMs can talk to each other by default
+- Engineering shouldn't be able to break finance network
+- Compromised production website shouldn't allow stealing HR data
+- Need: tenant/organisational isolation — different groups isolated on shared physical infrastructure
+
+**Problem 2: Connectivity**
+- VMs in same data centre can name each other by MAC address (L2 addresses)
+- To access machines/VMs in another data centre, IP addresses (L3 addresses) must be used
+- IP addresses must be globally routable
+- Need: VMs in different DCs communicate — but L2 doesn't extend across DCs naturally
+
+### Solution: Network Virtualization via Tunneling
+
+**No tunnel:** Packet from VM to VM passes through switches, each switch looks at destination MAC — standard L2 forwarding within single L2 domain.
+
+**Via tunnel:** Packet encapsulated — outer header carries physical network routing (L3), inner header carries original VM-to-VM L2 frame. Physical switches see only outer tunnel header.
+
+**Encapsulation protocols:**
+
+| Protocol | Description |
+|----------|-------------|
+| **NVGRE** (Network Virtualization using GRE) | Microsoft-led. GRE encapsulation. Guest VSID (Virtual Subnet ID) for segmentation. |
+| **VXLAN** (Virtual eXtensible LAN) | Industry standard. UDP-based encapsulation of L2 frames. 24-bit VNI (16 million segments vs VLAN's 4096). Can extend across L3 boundaries. |
+
+**VXLAN vs VLAN — key advantage:** VLAN limited to 12-bit = 4096 VLAN IDs. VXLAN uses 24-bit VNI = 16 million virtual networks. Critical for large cloud providers with many tenants.
+
+### Overlay Network
+
+Virtual overlay network = form of network virtualization creating virtual layer of network topologies on top of physical network infrastructure.
+
+Protocols: VXLAN, NVGRE, GRE.
+
+How it works: Overlay creates virtual network independent of physical topology. VMs see normal L2 network (MAC addressing). Underlay (physical) carries encapsulated traffic, routes on outer IP headers. Overlay decoupled from underlay — change physical network without affecting virtual networks.
+
+### Reference Business Model
+
+| Player | Role |
+|--------|------|
+| **Infrastructure Providers (InP)** | Manage physical infrastructure (DCs, physical networks, servers, storage) |
+| **Service Providers (SP)** | Create virtual networks by aggregating resources from InPs. Sell virtual network services to end users |
+| **End Users (U)** | Buy and use services from different service providers |
+| **Brokers (B)** | Mediators between InP, SP, and U |
+
+### Network-as-a-Service (NaaS)
+
+Network capabilities delivered as on-demand cloud service over internet, with pay-per-use pricing. Consumers provision virtual networks, bandwidth, connectivity, network functions on demand. No need to own/manage physical network infrastructure.
+
+**Reference:** Baroncelli, F., Martini, B., & Castoldi, P. (2010). Network virtualization for cloud computing. *Annals of Telecommunications*, 65(11-12), 713-721.
 
 ---
 
 ## Key Takeaways
 
-1. **Network design matters.** Subnet placement (public vs private) is a fundamental security decision. Databases belong in private subnets.
-2. **VPC peering is not transitive** — a classic gotcha. For many VPCs, Transit Gateway is the answer.
-3. **CDNs reduce latency by proximity** — caching content closer to users. Not a silver bullet; cacheability matters.
-4. **DNS routing policies are powerful** — latency-based for performance, geolocation for compliance/localisation, failover for DR.
-5. **Health checks enable DNS failover** — without them, DNS doesn't know when to switch.
-
----
-
-## What's Next (Week 05)
-
-- Serverless computing — FaaS (Lambda, Azure Functions)
-- Event-driven architecture
-- Cold starts, pricing, use cases, limitations
-
----
-
-## Questions to Think About
-
-1. Why can't VPC peering be transitive? What would need to change to make it transitive?
-2. When would you choose geolocation routing over latency-based routing?
-3. A global e-commerce site has a CDN in front of its product images. What happens when you update a product image — how do you make sure users see the new version?
+1. **Network virtualisation solves two problems:** isolation (tenants separated on shared infra) and connectivity (extend L2 across L3 boundaries via tunnels).
+2. **VXLAN is the key protocol.** Know: UDP encapsulation, 24-bit VNI (16 million segments), extends L2 across L3. Contrast with VLAN (12-bit, 4096 limit, no L3 extension).
+3. **VMware virtual networking:** vNIC → virtual ports → vSwitch → (VM-VM or VM-Uplink) → pNIC → physical network. Port groups = labelled network segments.
+4. **Overlay vs underlay:** Overlay = virtual network on top. Underlay = physical network carrying encapsulated traffic. Decoupled — change one without affecting the other.
+5. **NaaS** = network as on-demand cloud service. Aligns with cloud computing model.
 
 ---
 
 ## Related
 
-- [[UTS/Cloud Computing Infrastructure/Sources/Lecture/Week 04]] — full lecture notes
+- [[UTS/Cloud Computing Infrastructure/Sources/Lecture/Week 04]] — full notes
 - [[UTS/Cloud Computing Infrastructure/Quiz Prep/Week 04 Quiz Prep]] — practice questions
-- [[UTS/Cloud Computing Infrastructure/Weekly Summaries/Week 05 Summary]] — next week
+- [[UTS/Cloud Computing Infrastructure/Weekly Summaries/Week 05 Summary]] — Week 5
+- [[UTS/Cloud Computing Infrastructure/Weekly Summaries/Week 01-03 Summary]] — foundation

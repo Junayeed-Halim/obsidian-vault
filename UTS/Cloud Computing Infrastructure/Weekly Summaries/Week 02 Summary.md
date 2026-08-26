@@ -1,7 +1,7 @@
 ---
 type: course
 course: Cloud Computing
-title: Week 02 Summary — IaaS Deep Dive: Compute, Storage, Networking
+title: Week 02 Summary — Cloud Infrastructure Design: Virtualisation Technologies
 status: evergreen
 created: 2026-08-26
 tags:
@@ -12,94 +12,124 @@ tags:
   - cloud-computing
 ---
 
-# Week 02 Summary — IaaS Deep Dive: Compute, Storage, Networking
+# Week 02 Summary — Cloud Infrastructure Design: Virtualisation Technologies
 
-> **Based on:** [[UTS/Cloud Computing Infrastructure/Sources/Lecture/Week 02]]
+> **Source:** [[UTS/Cloud Computing Infrastructure/Sources/Lecture/Week 02]]
 > **Course:** [[UTS/Cloud Computing Infrastructure/Exam Prep|Cloud Computing Infrastructure]]
+> **Lecturer:** Haimin Zhang
 
 ---
 
 ## What We Covered
 
-### 1. Compute in IaaS — The Virtual Machine
+### Announcements
 
-- **VMs / Instances:** The fundamental compute unit of IaaS. You choose the instance type (CPU, memory, storage, network capacity) and the cloud provider provisions a virtual machine on their physical hardware.
-- **Instance families:** Different workloads need different hardware profiles:
-  - **General purpose:** Balanced CPU, memory, storage. Good default for most workloads (AWS M-series, Azure D-series).
-  - **Compute optimised:** High CPU, lower memory. Batch processing, video encoding, compute-heavy apps (AWS C-series, Azure F-series).
-  - **Memory optimised:** High memory-to-CPU ratio. Databases, in-memory caches, analytics (AWS R-series, Azure E-series).
-  - **Storage optimised:** High sequential/read throughput. Data warehousing, log processing (AWS I/D-series, Azure L-series).
-  - **GPU instances:** Hardware acceleration for ML training, graphics rendering, video encoding.
-- **Scaling options:**
-  - **Vertical scaling (scale up):** Increase the size of a single VM — more CPU, more memory. Simple but has a ceiling (largest instance type) and usually requires downtime.
-  - **Horizontal scaling (scale out):** Add more VMs behind a load balancer. More complex but virtually unlimited and enables high availability.
-  - **Auto scaling:** Automatically add/remove VMs based on demand (CPU utilisation, request count, schedule). Combines horizontal scaling with cost efficiency — scale down when idle.
+- **Assignment 1 released** — Due: Week 5, Friday 28 August 2026, 17:00. Weight: 20%. Late penalty: 20% per working day. Special consideration by Week 4 with formal documentation.
 
-### 2. Storage in IaaS — Three Types
+### Cloud Service Models — Deeper Treatment
 
-| Type | Description | Characteristics | AWS | Azure | Use Cases |
-|------|-------------|-----------------|-----|-------|-----------|
-| **Block storage** | Virtual disk attached to a VM, appears as a physical drive | Low latency, filesystem on top, mounted to one VM at a time (typically), can be resized | EBS | Disk Storage | OS disks, databases, transactional workloads, boot volumes |
-| **Object storage** | Flat namespace, objects stored with metadata, HTTP/S access | Massive scalability, high durability, no filesystem, accessed via API/URL, eventually consistent (mostly) | S3 | Blob Storage | Images, videos, backups, logs, static website hosting, data lakes |
-| **File storage** | Shared filesystem using standard protocols (NFS, SMB) | Shared access from multiple VMs, familiar filesystem interface, managed by provider | EFS | Files | Shared configuration, legacy apps needing shared disk, home directories |
+- **IaaS:** Consumer uses virtual server. Provider gives contractual guarantees on capacity, performance, availability. Consumer responsible for OS+; provider for hardware+.
+- **PaaS:** Consumer accesses ready-made environment, intentionally shielded from platform implementation details.
+- **SaaS:** Consumer gets service contract but no access to underlying IT resources or implementation details.
 
-**Key distinction:** Block = disk for a VM. Object = files in a bucket (HTTP). File = shared network drive.
+### Infrastructure Components
 
-### 3. Networking in IaaS — VPC/VNet Basics
+| Layer | Components |
+|-------|-----------|
+| **Hardware** | Computing (servers, processors, memory), Storage (disks, SAN, NAS), Network (switches, routers, NICs) |
+| **Software** | Virtualisation software (hypervisors, VMM) |
 
-- **VPC (AWS) / VNet (Azure):** Your private, logically isolated network in the cloud. You define IP address ranges (CIDR blocks), subnets, route tables, gateways. Complete control over network topology.
-- **Subnets:** Divisions within a VPC. Public subnets route to the internet (Internet Gateway). Private subnets don't — used for internal resources.
-- **Internet Gateway (IGW):** Enables communication between the VPC and the internet. Attached to the VPC, provides NAT for instances with public IPs.
-- **Security Groups:** Stateful firewall at the instance level. Rules allow traffic IN (and return traffic automatically allowed). Instance-level granularity.
-- **Network Security Groups (Azure NSG):** Similar concept in Azure — filter traffic to/from subnets or NICs.
-- **NAT Gateway:** Enables instances in private subnets to initiate outbound internet connections (patches, downloads) without exposing them to inbound traffic.
-- **Load Balancers:** Distribute incoming traffic across multiple targets (VMs, containers). Layer 4 (TCP/UDP) or Layer 7 (HTTP/HTTPS). Health checks detect unhealthy targets and route around them. AWS ELB/ALB, Azure Load Balancer/App Gateway.
+### Virtualisation — Four Types in Detail
 
-### 4. AWS ↔ Azure Service Mapping
+1. **Processor virtualisation:** Processor shared across multiple application instances. Each VM gets vCPUs scheduled onto physical cores.
+2. **Memory virtualisation:** Memory aggregated into a pool, managed on behalf of multiple apps. VM sees contiguous virtual memory; hypervisor maps to physical frames.
+3. **Network virtualisation:** Virtual IP management and segmentation — logical networks decoupled from physical topology.
+4. **Storage virtualisation:** Abstraction layer for physical storage — VM sees virtual disks, physical details hidden.
 
-| Concept | AWS | Azure |
-|----------|-----|-------|
-| Compute (VMs) | EC2 | Virtual Machines |
-| Block Storage | EBS | Managed Disks |
-| Object Storage | S3 | Blob Storage |
-| File Storage | EFS | Files |
-| VPC | VPC | VNet |
-| Internet Gateway | IGW | VNet Gateway / Public subnet |
-| Security Firewall | Security Groups | NSGs |
-| Load Balancer (L4) | ELB / NLB | Load Balancer |
-| Load Balancer (L7) | ALB | Application Gateway |
+### Virtual Machines
+
+- Isolated instances of app + guest OS running like separate computer
+- Encapsulate virtual hardware, virtual disks, metadata
+- Can connect to peripherals and function like physical computers
+
+### Hypervisor (VMM) — In Depth
+
+**Definition:** Manages guest OSs and their use of system resources (CPU, memory, storage). Supports isolation of multiple VMs.
+
+**Resources provided to VMs:** Logical CPU/memory, logical storage blocks, logical network resources.
+
+**Four functions of hypervisors:**
+1. Creating and managing VMs
+2. Allocating hardware resources to VMs from virtualised pool
+3. Monitoring VM status
+4. Moving VMs between systems (live migration / VMotion)
+
+### Types of Hypervisors — MUST KNOW FOR EXAM
+
+| | **Bare-metal / Type 1** | **Hosted / Type 2** |
+|---|---|---|
+| Runs on | Directly on hardware (no host OS) | On top of host OS |
+| Examples | ESXi, Hyper-V (as role), Xen, KVM | VMware Workstation, VirtualBox |
+| Performance | Higher — direct hardware access | Lower — goes through host OS |
+| Use case | Production data centres, cloud | Desktop testing, development |
+| Overhead | Minimal | More (host OS consumes resources) |
+
+**Physical cloud architecture diagram:** Type 1 hypervisors on each physical server, all jointly controlled by VIM (vCenter). This is the production cloud model.
+
+### Storage Hardware — Three Types
+
+| Type | Full Name | Description | Connection |
+|------|-----------|-------------|------------|
+| **DAS** | Direct Attached Storage | Storage directly connected to server via HBA | Inside server or directly cabled |
+| **NAS** | Network-Attached Storage | File-level storage accessed over network | Ethernet, NFS/SMB protocols |
+| **SAN** | Storage Area Network | Block-level storage over dedicated storage network | Fibre Channel, iSCSI, FCoE, ATAoE |
+
+### Storage Virtualisation
+
+**Definition:** Presenting a logical view of physical storage resources as a single pool of storage.
+
+**Two types:**
+- **Block-level:** Abstraction below OS/file-system level
+- **File-level:** Virtualisation at file-system level (NFS, SMB)
+
+**Three methods:**
+- **Network-based:** Appliance on network between servers and storage
+- **Host-based:** Host OS/hypervisor manages virtualisation (e.g., VMFS, LVM)
+- **Array-based:** Storage array itself provides virtualisation
+
+### VMware Architecture
+
+- **Storage:** VMs see virtual SCSI disks connected to vHBA. Disks provisioned from Datastores — abstraction hides physical storage type.
+- **Network:** VMs communicate via vNIC (virtual NIC, unique MAC, decoupled from hardware NIC). Port groups aggregate ports under common configuration.
+
+### Network Virtualisation
+
+Entails virtual IP management and segmentation. Multiple virtual networks coexist on same physical infrastructure, each isolated from others. Enables multi-tenancy.
 
 ---
 
 ## Key Takeaways
 
-1. **IaaS gives you the building blocks** — VMs, storage, networking. You assemble them. PaaS hides the assembly; SaaS hides everything.
-2. **Instance type matters.** Choose based on workload profile (CPU-heavy, memory-heavy, storage-heavy). General purpose is fine for starting out.
-3. **Three storage types serve three purposes.** Don't use S3 for a database disk. Don't use EBS for sharing files across VMs.
-4. **VPC design is foundational.** Public vs private subnet placement is a security decision, not an afterthought.
-5. **Auto scaling + load balancing = elasticity.** The ability to handle variable load without wasting money on idle capacity.
-6. **AWS and Azure use different names for the same concepts.** Know the mapping — exam questions might use either.
+1. **Hypervisor types are a guaranteed exam topic.** Type 1 = bare-metal production. Type 2 = hosted desktop/testing.
+2. **DAS/NAS/SAN** — know the difference and when each is used. DAS = direct, NAS = file-level network, SAN = block-level network.
+3. **Storage virtualisation types and methods** — block vs file level, network vs host vs array based.
+4. **Hypervisor functions** — 4 functions: create/manage, allocate resources, monitor, move VMs.
+5. **VMware architecture** — vNIC, vSwitch, port groups, Datastore abstraction. This is the example architecture used throughout the course.
+6. **Network virtualisation** — enables multi-tenancy by creating isolated virtual networks on shared physical infrastructure.
 
 ---
 
-## What's Next (Week 03)
+## Connections to Other Weeks
 
-- High availability across availability zones and regions
-- Disaster recovery strategies (backup, pilot light, warm standby, active-active)
-- Auto scaling deep dive — policies, configurations, best practices
-
----
-
-## Questions to Think About
-
-1. Why would you use block storage (EBS) for a database instead of object storage (S3)?
-2. A web application needs to handle traffic spikes during business hours and almost nothing at night. What combination of services achieves this most cost-effectively?
-3. What's the difference between a public subnet and a private subnet? Why would you put a database in a private subnet?
+- **Week 1** defined cloud, service models, NIST definition — Week 2 shows HOW cloud is built (virtualisation)
+- **Week 3** extends to management mechanisms and cloud architectures — virtualisation is the foundation
+- **Week 4** extends to network virtualisation specifically — VXLAN, overlay networks
 
 ---
 
 ## Related
 
-- [[UTS/Cloud Computing Infrastructure/Sources/Lecture/Week 02]] — full lecture notes
+- [[UTS/Cloud Computing Infrastructure/Sources/Lecture/Week 02]] — full notes
 - [[UTS/Cloud Computing Infrastructure/Quiz Prep/Weeks 01-03 Quiz Prep]] — practice questions
-- [[UTS/Cloud Computing Infrastructure/Weekly Summaries/Week 03 Summary]] — next week
+- [[UTS/Cloud Computing Infrastructure/Weekly Summaries/Week 01-03 Summary]] — combined Weeks 1-3 summary
+- [[UTS/Cloud Computing Infrastructure/Weekly Summaries/Week 03 Summary]] — Week 3

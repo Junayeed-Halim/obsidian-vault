@@ -1,7 +1,7 @@
 ---
 type: course
 course: Cloud Computing
-title: Week 05 Summary — Serverless Computing
+title: Week 05 Summary — Data Centre Fundamentals and Virtualisations
 status: evergreen
 created: 2026-08-26
 tags:
@@ -12,104 +12,207 @@ tags:
   - cloud-computing
 ---
 
-# Week 05 Summary — Serverless Computing
+# Week 05 Summary — Data Centre Fundamentals and Virtualisations
 
-> **Based on:** [[UTS/Cloud Computing Infrastructure/Sources/Lecture/Week 05]]
+> **Source:** [[UTS/Cloud Computing Infrastructure/Sources/Lecture/Week 05]]
 > **Course:** [[UTS/Cloud Computing Infrastructure/Exam Prep|Cloud Computing Infrastructure]]
+> **Lecturer:** Haimin Zhang
 
 ---
 
 ## What We Covered
 
-### 1. What "Serverless" Actually Means
+### What is a Data Center?
 
-- **Misleading name:** There are servers. You just don't manage them, provision them, scale them, or patch them.
-- **The value proposition:** You deploy code. The cloud provider handles everything else — infrastructure, scaling, availability, patching. You pay only when your code runs.
-- **Two forms:**
-  - **FaaS (Function as a Service):** Individual functions triggered by events. AWS Lambda, Azure Functions, Google Cloud Functions.
-  - **Serverless services:** Managed services where you don't see the infrastructure at all. DynamoDB, S3, API Gateway, Aurora Serverless.
+A facility that houses critical computing resources in controlled environments under centralized management. Resources include: mainframes, web and application servers, file and print servers, messaging servers, application software and OS, storage subsystems, network infrastructure.
 
-### 2. How FaaS Works — Core Mechanics
+### Data Center Goals
 
-- **Event-driven:** Functions execute in response to events — HTTP requests (via API Gateway), file uploads (S3), messages (SQS/SNS), database changes (DynamoDB Streams), schedules (EventBridge/CloudWatch Events), IoT events.
-- **Stateless:** Each invocation is independent. No persistent state between invocations. State goes to external services (databases, S3, caches).
-- **Automatic scaling:** From 0 (no cost when idle) to thousands of concurrent executions. Zero configuration. Provider handles it.
-- **Pay-per-execution:** Billed by number of invocations and execution duration (millisecond granularity). No cost when no requests come in.
-- **Concurrency limits:** Providers cap concurrent executions per region/account (AWS Lambda default = 1,000 per region, configurable). Prevent runaway costs.
+**Traditional business-oriented goals (generate IT initiatives):**
+- Business continuance (DR, redundancy, backup)
+- Increased security in the DC
+- Storage consolidation
+- Application, server, and DC consolidation
+- Etc.
 
-### 3. Cold Starts — The Serverless Tax
+**Data center design criteria:**
+- Availability
+- Scalability
+- Security
+- Performance
+- Manageability
+- Etc.
 
-- **What:** Additional latency on first invocation after idle period. Provider must provision a new execution environment, load your code, initialise runtime.
-- **Why:** Providers shut down idle environments to save costs. New requests need fresh environments.
-- **Impact:** ~100ms to several seconds depending on runtime, package size, memory allocation.
-- **Mitigations:**
-  - **Provisioned concurrency** (AWS) — pay to keep environments warm
-  - **Periodic pings** — scheduled events keep functions warm (hacky but works)
-  - **Smaller packages** — less code to load = faster starts
-  - **Faster runtimes** — compiled languages (Go, Rust) generally cold-start faster
-  - **ARM/Graviton** — sometimes faster than x86
-- **When it matters:** User-facing, latency-sensitive requests. Background processing — cold starts are irrelevant.
+(These criteria often conflict — availability vs cost, scalability vs performance — understanding trade-offs matters.)
 
-### 4. Use Cases — Where Serverless Shines
+### Data Center Facilities
 
-- **API backends:** HTTP APIs via API Gateway → Lambda. Scale automatically, pay per request.
-- **Event processing:** S3 upload → Lambda to process image, generate thumbnail, notify. Perfect event-driven match.
-- **Scheduled tasks:** Cron jobs, cleanup, reports via EventBridge scheduled rules.
-- **Real-time stream processing:** Kinesis/DynamoDB Streams → Lambda for transformations.
-- **Chatbots, webhooks, glue code:** Lightweight integrations, small pieces of logic.
-- **Zero-idle workloads:** Infrequent but unpredictable traffic — you don't pay for idle time.
+| Consideration | Importance |
+|---------------|------------|
+| Power capacity | Enough electrical power for all equipment + redundancy (UPS, generators) |
+| Cooling capacity | Adequate and concentrated cooling — servers generate heat; overheating causes failures |
+| Cabling | Organised cabling for power, network, storage — affects maintainability and airflow |
+| Temperature and humidity controls | Too hot = failure; too cold = waste; wrong humidity = static/corrosion |
+| Fire and smoke systems | Detection and suppression — must not damage equipment |
+| Physical security | Restricted access and surveillance systems |
+| Rack space and raised floors | Standardised rack layout; raised floors for cabling, cooling distribution |
+| Modularity and flexibility | Ability to add capacity in modules, adapt to changing needs |
 
-### 5. Limitations — Where Serverless Fails
+### Data Center Architecture
 
-- **Execution time limits:** Lambda max 15 minutes. Long-running jobs need VMs/containers.
-- **Statelessness:** No in-memory state between invocations. Must use external storage.
-- **Cold starts:** Real latency penalty for latency-sensitive, user-facing, low-volume workloads (mitigatable but adds cost/complexity).
-- **Vendor lock-in:** Tightly coupled to provider's event sources, SDK, deployment model. Moving to another cloud means rewriting.
-- **Debugging complexity:** Distributed, event-driven, short-lived. Traditional debugging tools don't work the same way. Need distributed tracing (X-Ray, CloudWatch).
-- **Not for consistent high-throughput:** At high steady volume, provisioned infrastructure (reserved VMs/containers) is often cheaper than pay-per-request.
+**Three-Layer Data Center Model:** Network layer, Storage layer, Compute layer.
 
-### 6. Cost Comparison — IaaS vs Containers vs Serverless
+**Traditional (dedicated resources):** Each layer has dedicated resources — separate network switches, separate storage arrays, separate server racks. Underutilised (10% CPU server still uses full power/cooling/space). Hard to scale — adding capacity means new physical servers.
 
-| | IaaS (VMs) | Containers | Serverless (FaaS) |
-|--|------------|------------|-------------------|
-| **Provisioning** | Manual or ASGs | Orchestration (ECS/EKS) | None |
-| **Scaling** | Configured | Configured | Automatic, instant |
-| **Pricing** | Per hour (running) | Per hour / request | Per request + execution time |
-| **Idle cost** | Pay even when idle | Pay even when idle | Zero when idle |
-| **Max duration** | Unlimited | Unlimited | ~15 minutes |
-| **Best for** | Predictable, long-running, full control | Microservices, portable, moderate traffic | Variable traffic, event-driven, short tasks, zero idle |
+**Why virtualise? — Historical evolution:**
+- **Originally:** Run multiple workloads on a single host — server consolidation
+- **Later:** Easier to clone existing machine than build from scratch — clone production for DR, dev, test
+- **Today:** Workload mobilisation — without it there is no Cloud
+
+### Benefits of Virtualisation in Data Center
+
+| Benefit | Description |
+|---------|-------------|
+| Reduced cost | Fewer physical servers, less power, less cooling, less space |
+| Faster redeploy | Clone VM in minutes vs provision physical server in days/weeks |
+| Better testing | Clone production for realistic dev/test |
+| No vendor lock-in | VMs portable across hardware (if hypervisor supports) |
+| Better disaster recovery | Clone production to DR site; replicate VMs; failover |
+| Less heat buildup | Fewer physical servers = less heat |
+| Easier migration to cloud | VMs are unit of cloud |
+| Etc. | |
+
+### Network Layer Consolidation and Virtualisation
+
+Network layer consolidation interconnects networking resources into a shared, intelligent network. Network virtualisation creates multiple virtual networks on shared physical network. Enables consolidation while maintaining isolation.
+
+### Storage Layer Consolidation and Virtualisation
+
+Once storage layer virtualized, storage treated as pooled resource. Physical storage from multiple arrays pooled into single logical pool. VMs see virtual disks provisioned from pool. Enables: storage overcommitment (thin provisioning), live migration of storage, snapshots/cloning, deduplication.
+
+### Compute Layer Consolidation and Virtualisation
+
+Compute consolidation reduces costs and increases efficiency by using standard servers in pooled configurations. Multiple VMs on each physical server. Servers pooled — VMs draw from pool. Enables: server consolidation (10 VMs on 1 server), load balancing, HA (VMs restart on other servers if one fails), resource elasticity.
+
+### Kusnetzky Group Model of Virtualisation — 5 Layers (Memorise)
+
+| Layer | What it virtualises | Standards/examples |
+|-------|---------------------|-------------------|
+| **Network Virtualisation** | Hardware and software network resources into single software-based management entity | VXLAN, NVGRE, 802.1q (VLANs) |
+| **Storage Virtualisation** | Physical components of storage system, presented consistently to client | SAN, Block-level, File-level (NFS, SMB) |
+| **Processing Virtualisation** | Physical hardware from system services, OS, applications | Hypervisors — one system to many, or many to one (grid) |
+| **Application Virtualisation** | Application from underlying OS/hardware — runs on variety of platforms | Java Framework, .NET — portable code base |
+| **Access Virtualisation** | Any device access any application without knowing about the other | VDI, RDP (Microsoft), ICA (Citrix) |
+
+### Storage Virtualisation — Detailed
+
+**Definition:** Combination of hardware and software technologies that abstracts physical components of storage system from application/server and presents consistently to client.
+
+**Characteristics:**
+- Commonly used to share physical storage between multiple VMs and hypervisors
+- Typically starts with storage device (SAN) exporting at Block Level or File Level
+- **Block level:** Abstraction below OS/file-system
+- **File level:** Virtualisation at file-system level (network file system)
+
+**Functions:**
+- Multiple systems access same storage system (multi-tenancy at storage layer)
+- Storage physically separated from local server but appears accessible
+
+**VMware Infrastructure Storage Architecture:**
+- Storage presented to VMs as virtual SCSI disks connected to vHBA
+- Virtual SCSI disks provisioned from Datastore elements
+- Datastore abstracts physical storage — VM doesn't know if disk is on SAN, NAS, or DAS
+
+### What is SAN?
+
+Storage Area Network — storage device accessed over storage network. Virtualises multiple physical storage devices into logical storage volumes (LUNs). Keeps track of mappings between logical and physical storage blocks, provides translation layer. Allows general-purpose server to access data on range of storage devices. Accessed over: Fibre Channel, iSCSI, FCoE, ATAoE, etc.
+
+### Processing Virtualisation
+
+Hardware and software technology that abstracts physical hardware from system services, OS, and applications. Can make one system appear to be many (server consolidation) or many systems appear to be single computing resource (grid/cluster). Goals: raw performance, scalability, reliability/availability, agility, consolidation.
+
+### Application Virtualisation
+
+Application-level virtualisation allowing software to run on variety of OS, hardware platforms, and devices. Usually means application uses application framework (Java, .NET). Advanced forms: restart on failure, start another instance if not meeting SLA, workload balancing among instances.
+
+### Access Virtualisation
+
+Hardware and software technology allowing nearly any device to access any application. Application sees device it's used to; device sees application it knows how to display. Special-purpose hardware may be used for performance. Example: VDI — Microsoft RDP, Citrix ICA.
+
+### The Virtual Data Center — Ideal Architecture
+
+```
+Internet → Firewall → Outward facing Network
+                      ↓
+      Physical Hosts (running virtual workloads)
+                      ↓
+        Storage Layer    Internal Facing Network
+```
+
+Multi-site: Production DC (Sydney) ↔ DR DC (Melbourne) ↔ Branch DC (Shanghai) + Security Layer + Compute Layer + Storage Layer.
+
+Non-virtualised physical workloads still exist alongside: IBM p, z, I series (mainframes), Sparc, ATM devices, legacy devices.
+
+### Technologies in a Data Center
+
+| Approach | Description | Trade-offs |
+|----------|-------------|------------|
+| **Separate Compute, Storage, Network** | Traditional — each layer separate equipment | Moderate entry cost, easy to scale, less integrated |
+| **Data Center in a Box** (HP EcoPod) | Compute, storage, network in single or few racks | High entry cost, finite scaling, immediate use, mobile |
+| **Converged Devices** (Nutanix) | Compute, storage, network in 2-4 rack units | Low entry cost, high scalability, mesh topology, used by Google |
+
+### Virtualisation Platforms
+
+| Platform | Characteristics |
+|----------|----------------|
+| **VMware** | Largest enterprise market share. Seamless uplift from physical layer. Automatic VM movement for LB/DR. Clone production for Dev/Test/DR. Supports all X86 OS. |
+| **Hyper-V** | Growing enterprise market share. No support for uplifting from physical layer (cannot clone production). |
+| **Amazon EC2** | "Holy Grail of enterprise" despite small market share. No automated support for physical uplift. |
+| **Xen** | Open source, popular with Linux users in Asia. Supports all X86 OS. |
+| **Virtual Box** | Open source, owned by Oracle. Only complete vertical offering (IaaS, PaaS, SaaS). Supports all X86 OS. |
+
+### Migration Compatibility Matrix (Memorise)
+
+| From ↓ / To → | VMware | Hyper-V | EC2 | Xen | VBox |
+|---------------|--------|---------|-----|-----|------|
+| VMware | — | Full Motion Compatible | Convert | Convert | Compatible |
+| Hyper-V | Full Motion Compatible | — | Convert | Compatible | Convert |
+| EC2 | Convert | Rebuild | — | Compatible | Convert |
+| Xen | Rebuild | Rebuild | Compatible | — | Rebuild |
+| VBox | Compatible | Convert | Rebuild | Compatible | — |
+
+**Key insight:** VMware has broadest compatibility. EC2 and Hyper-V have limited external migration paths. AWS EC2 requires rebuild from most platforms.
+
+### Considerations of Virtualising Data Center
+
+| Consideration | Question |
+|---------------|----------|
+| Power | Will site have adequate electrical power? |
+| Cooling | Will site have adequate concentrated cooling capacity? |
+| Security | Will site have appropriate security facilities? |
+| Backup | Will site have adequate utility backup? |
+| Availability | Will consolidated/virtualised platform provide needed availability? |
+| Skills | Will platform require new support tools and/or staff skills? |
+
+**Key point:** Virtualisation concentrates workloads onto fewer physical servers — makes each server MORE critical. Power, cooling, backup become MORE important, not less.
 
 ---
 
 ## Key Takeaways
 
-1. **"Serverless" = you don't manage servers.** Servers exist; you just don't deal with them.
-2. **Event-driven + stateless is the core architecture.** Functions respond to events, hold no state.
-3. **Cold starts are the price of zero-idle.** Pay with latency or pay to keep warm.
-4. **Pay-per-use is great for variable traffic** — but at high steady volume, provisioned is cheaper.
-5. **15-minute limit** is a hard boundary. Long jobs need VMs/containers.
-6. **Vendor lock-in is real** — serverless code is the most cloud-specific you can get.
-
----
-
-## What's Next (Week 06)
-
-- Cloud security, IAM, compliance, cost management
-- Shared Responsibility Model
-- Pricing models deep dive
-
----
-
-## Questions to Think About
-
-1. Why are serverless functions stateless by design? What would change if they had persistent state?
-2. A startup has an API that gets 10 requests per day. What's the most cost-effective way to host it?
-3. Your serverless function suddenly receives 10,000 concurrent requests. What happens? What could go wrong?
+1. **Kusnetzky Model — 5 layers of virtualisation:** Network, Storage, Processing, Application, Access. Know each layer's definition and example standards.
+2. **Why virtualise? Evolution:** Run multiple workloads → clone for DR/dev/test → workload mobilisation (no cloud without it).
+3. **Three DC architecture approaches:** Separate (traditional, moderate cost, easy scale), DC in a box (EcoPod, high cost, finite scale), Converged (Nutanix, low entry cost, high scale, mesh).
+4. **VMware vs Hyper-V vs EC2:** VMware = largest, supports physical uplift, most compatible. Hyper-V = growing, no physical uplift. EC2 = holy grail, no physical uplift, small market share but aspirational.
+5. **Migration compatibility matrix** — know the key relationships: VMware↔Hyper-V = Full Motion Compatible; EC2 requires Convert/Rebuild from most; Xen↔EC2 = Compatible.
+6. **Virtualisation makes physical infrastructure MORE critical** — power, cooling, backup more important when workloads concentrate on fewer servers.
 
 ---
 
 ## Related
 
-- [[UTS/Cloud Computing Infrastructure/Sources/Lecture/Week 05]] — full lecture notes
+- [[UTS/Cloud Computing Infrastructure/Sources/Lecture/Week 05]] — full notes
 - [[UTS/Cloud Computing Infrastructure/Quiz Prep/Week 05 Quiz Prep]] — practice questions
-- [[UTS/Cloud Computing Infrastructure/Weekly Summaries/Week 06 Summary]] — next week
+- [[UTS/Cloud Computing Infrastructure/Weekly Summaries/Week 04 Summary]] — Week 4 (network virtualisation connects here)
+- [[UTS/Cloud Computing Infrastructure/Weekly Summaries/Week 06 Summary]] — Week 6 (DC management)
+- [[UTS/Cloud Computing Infrastructure/Weekly Summaries/Week 01-03 Summary]] — foundation (virtualisation basics)
