@@ -14,7 +14,7 @@ tags:
 
 # Week 03 Summary — Cloud Infrastructure/Management Mechanisms and Architectures
 
-> **Source:** [[UTS/Cloud Computing Infrastructure/Sources/Lecture/Week 03]]
+> **Source:** [[UTS/Cloud Computing Infrastructure/Lecture - Notes/Week 03]]
 > **Course:** [[UTS/Cloud Computing Infrastructure/Exam Prep|Cloud Computing Infrastructure]]
 > **Lecturer:** Haimin Zhang
 
@@ -126,7 +126,7 @@ tags:
 
 ## Related
 
-- [[UTS/Cloud Computing Infrastructure/Sources/Lecture/Week 03]] — full notes
+- [[UTS/Cloud Computing Infrastructure/Lecture - Notes/Week 03]] — full notes
 - [[UTS/Cloud Computing Infrastructure/Quiz Prep/Weeks 01-03 Quiz Prep]] — practice questions
 - [[UTS/Cloud Computing Infrastructure/Weekly Summaries/Week 02 Summary]] — Week 2
 - [[UTS/Cloud Computing Infrastructure/Weekly Summaries/Week 04 Summary]] — Week 4

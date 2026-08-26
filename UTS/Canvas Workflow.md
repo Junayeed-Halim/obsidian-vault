@@ -218,7 +218,7 @@ Open the corresponding `Weekly Summaries/Week XX Summary.md`:
 ## Related
 
 - [[UTS/Cloud Computing Infrastructure/Exam Prep]] — exam hub, start here
-- [[UTS/Cloud Computing Infrastructure/Sources/Lecture/Week 01-03]] — source note template
+- [[Week 01-03]] — source note template
 - [[UTS/Cloud Computing Infrastructure/Quiz Prep/Weeks 01-03 Quiz Prep]] — quiz template
 - [[UTS/Cloud Computing Infrastructure/Weekly Summaries/Week 01-03 Summary]] — summary (pre-drafted)
 - [[Canvas Workflow]] — this guide

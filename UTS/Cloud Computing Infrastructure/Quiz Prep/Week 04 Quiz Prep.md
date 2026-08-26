@@ -14,7 +14,7 @@ tags:
 
 # Quiz Prep — Week 04: Network Virtualization, NaaS
 
-> **Based on actual lecture content:** [[UTS/Cloud Computing Infrastructure/Sources/Lecture/Week 04]]
+> **Based on actual lecture content:** [[Week 04]]
 > **Course:** [[UTS/Cloud Computing Infrastructure/Exam Prep|Cloud Computing Infrastructure]]
 
 ---
@@ -247,6 +247,6 @@ VLAN is fine for small environments but fundamentally limited for large-scale mu
 
 ## Related
 
-- [[UTS/Cloud Computing Infrastructure/Sources/Lecture/Week 04]] — full lecture notes
+- [[Week 04]] — full lecture notes
 - [[UTS/Cloud Computing Infrastructure/Weekly Summaries/Week 04 Summary]] — summary
 - [[UTS/Cloud Computing Infrastructure/Exam Prep]] — exam hub

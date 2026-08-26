@@ -14,7 +14,7 @@ tags:
 
 # Quiz Prep — Week 06: Management of Data Center
 
-> **Based on actual lecture content:** [[UTS/Cloud Computing Infrastructure/Sources/Lecture/Week 06]]
+> **Based on actual lecture content:** [[Week 06]]
 > **Course:** [[UTS/Cloud Computing Infrastructure/Exam Prep|Cloud Computing Infrastructure]]
 
 ---
@@ -312,7 +312,7 @@ This connection shows that cloud computing doesn't invent new management concept
 
 ## Related
 
-- [[UTS/Cloud Computing Infrastructure/Sources/Lecture/Week 06]] — full lecture notes
+- [[Week 06]] — full lecture notes
 - [[UTS/Cloud Computing Infrastructure/Weekly Summaries/Week 06 Summary]] — summary
 - [[UTS/Cloud Computing Infrastructure/Exam Prep]] — exam hub
 - [[UTS/Cloud Computing Infrastructure/Weekly Summaries/Week 03 Summary]] — Week 3 (cloud management mechanisms — parallel concepts)

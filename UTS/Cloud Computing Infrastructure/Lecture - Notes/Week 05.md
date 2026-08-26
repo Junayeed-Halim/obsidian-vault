@@ -473,8 +473,8 @@ Before virtualising a data center, consider:
 
 ## Related
 
-- [[UTS/Cloud Computing Infrastructure/Sources/Lecture/Week 01-03]] — Weeks 1-3 foundation
-- [[UTS/Cloud Computing Infrastructure/Sources/Lecture/Week 04]] — Week 4 network virtualisation (connects to Week 5's network virtualisation layer)
-- [[UTS/Cloud Computing Infrastructure/Sources/Lecture/Week 06]] — Week 6 DC management (extends to operations of the DC)
+- [[Week 01-03]] — Weeks 1-3 foundation
+- [[Week 04]] — Week 4 network virtualisation (connects to Week 5's network virtualisation layer)
+- [[Week 06]] — Week 6 DC management (extends to operations of the DC)
 - [[UTS/Cloud Computing Infrastructure/Exam Prep]] — exam hub
 - [[UTS/Cloud Computing Infrastructure/Quiz Prep/Week 05 Quiz Prep]] — practice questions

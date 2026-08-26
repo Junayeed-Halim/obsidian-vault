@@ -14,7 +14,7 @@ tags:
 
 # Quiz Prep — Weeks 01-03
 
-> **Based on actual lecture content:** [[UTS/Cloud Computing Infrastructure/Sources/Lecture/Week 01-03]]
+> **Based on actual lecture content:** [[Week 01-03]]
 > **Course:** [[UTS/Cloud Computing Infrastructure/Exam Prep|Cloud Computing Infrastructure]]
 > **Covers:** Lecture 1 (introduction, service models), Lecture 2 (virtualisation, hypervisors, storage), Lecture 3 (cloud mechanisms, architectures, VMotion)
 
@@ -320,6 +320,6 @@ VMs can connect to peripheral devices and function just like physical computers 
 
 ## Related
 
-- [[UTS/Cloud Computing Infrastructure/Sources/Lecture/Week 01-03]] — full lecture notes
+- [[Week 01-03]] — full lecture notes
 - [[UTS/Cloud Computing Infrastructure/Weekly Summaries/Week 01-03 Summary]] — summary
 - [[UTS/Cloud Computing Infrastructure/Exam Prep]] — exam hub

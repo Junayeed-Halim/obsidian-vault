@@ -14,7 +14,7 @@ tags:
 
 # Week 02 Summary — Cloud Infrastructure Design: Virtualisation Technologies
 
-> **Source:** [[UTS/Cloud Computing Infrastructure/Sources/Lecture/Week 02]]
+> **Source:** [[UTS/Cloud Computing Infrastructure/Lecture - Notes/Week 02]]
 > **Course:** [[UTS/Cloud Computing Infrastructure/Exam Prep|Cloud Computing Infrastructure]]
 > **Lecturer:** Haimin Zhang
 
@@ -129,7 +129,7 @@ Entails virtual IP management and segmentation. Multiple virtual networks coexis
 
 ## Related
 
-- [[UTS/Cloud Computing Infrastructure/Sources/Lecture/Week 02]] — full notes
+- [[UTS/Cloud Computing Infrastructure/Lecture - Notes/Week 02]] — full notes
 - [[UTS/Cloud Computing Infrastructure/Quiz Prep/Weeks 01-03 Quiz Prep]] — practice questions
 - [[UTS/Cloud Computing Infrastructure/Weekly Summaries/Week 01-03 Summary]] — combined Weeks 1-3 summary
 - [[UTS/Cloud Computing Infrastructure/Weekly Summaries/Week 03 Summary]] — Week 3

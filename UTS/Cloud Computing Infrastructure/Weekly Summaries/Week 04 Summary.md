@@ -14,7 +14,7 @@ tags:
 
 # Week 04 Summary — Network Virtualization, NaaS
 
-> **Source:** [[UTS/Cloud Computing Infrastructure/Sources/Lecture/Week 04]]
+> **Source:** [[Week 04]]
 > **Course:** [[UTS/Cloud Computing Infrastructure/Exam Prep|Cloud Computing Infrastructure]]
 > **Lecturer:** Haimin Zhang
 
@@ -142,7 +142,7 @@ Network capabilities delivered as on-demand cloud service over internet, with pa
 
 ## Related
 
-- [[UTS/Cloud Computing Infrastructure/Sources/Lecture/Week 04]] — full notes
+- [[Week 04]] — full notes
 - [[UTS/Cloud Computing Infrastructure/Quiz Prep/Week 04 Quiz Prep]] — practice questions
 - [[UTS/Cloud Computing Infrastructure/Weekly Summaries/Week 05 Summary]] — Week 5
 - [[UTS/Cloud Computing Infrastructure/Weekly Summaries/Week 01-03 Summary]] — foundation

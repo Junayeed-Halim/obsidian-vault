@@ -485,9 +485,9 @@ Use the Quiz Prep questions for self-testing. Cover the `<details>` answers and 
 
 ## Related
 
-- [[UTS/Cloud Computing Infrastructure/Sources/Lecture/Week 01-03]] — Weeks 1-3 full notes
-- [[UTS/Cloud Computing Infrastructure/Sources/Lecture/Week 02]] — Week 2 full notes
-- [[UTS/Cloud Computing Infrastructure/Sources/Lecture/Week 03]] — Week 3 full notes
-- [[UTS/Cloud Computing Infrastructure/Sources/Lecture/Week 04]] — Week 4 full notes
-- [[UTS/Cloud Computing Infrastructure/Sources/Lecture/Week 05]] — Week 5 full notes
-- [[UTS/Cloud Computing Infrastructure/Sources/Lecture/Week 06]] — Week 6 full notes
+- [[Week 01-03]] — Weeks 1-3 full notes
+- [[UTS/Cloud Computing Infrastructure/Lecture - Notes/Week 02]] — Week 2 full notes
+- [[UTS/Cloud Computing Infrastructure/Lecture - Notes/Week 03]] — Week 3 full notes
+- [[Week 04]] — Week 4 full notes
+- [[Week 05]] — Week 5 full notes
+- [[Week 06]] — Week 6 full notes

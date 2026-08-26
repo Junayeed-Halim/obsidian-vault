@@ -298,7 +298,7 @@ Network-as-a-Service is the cloud delivery model for networking — network capa
 
 ## Related
 
-- [[UTS/Cloud Computing Infrastructure/Sources/Lecture/Week 01-03]] — Weeks 1-3 foundation (virtualisation basics, hypervisors, storage)
-- [[UTS/Cloud Computing Infrastructure/Sources/Lecture/Week 05]] — Week 5 data centre virtualisation (extends network virtualisation to full DC)
+- [[Week 01-03]] — Weeks 1-3 foundation (virtualisation basics, hypervisors, storage)
+- [[Week 05]] — Week 5 data centre virtualisation (extends network virtualisation to full DC)
 - [[UTS/Cloud Computing Infrastructure/Exam Prep]] — exam hub
 - [[UTS/Cloud Computing Infrastructure/Quiz Prep/Week 04 Quiz Prep]] — practice questions

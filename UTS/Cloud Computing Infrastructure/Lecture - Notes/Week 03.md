@@ -337,7 +337,7 @@ User Access Control, Core Services, Distributed Services, Plug-ins, Interfaces
 
 ## Related
 
-- [[UTS/Cloud Computing Infrastructure/Sources/Lecture/Week 01-03]] — Weeks 1-3 combined
-- [[UTS/Cloud Computing Infrastructure/Sources/Lecture/Week 02]] — Week 2 virtualisation detail
+- [[Week 01-03]] — Weeks 1-3 combined
+- [[UTS/Cloud Computing Infrastructure/Lecture - Notes/Week 02]] — Week 2 virtualisation detail
 - [[UTS/Cloud Computing Infrastructure/Exam Prep]] — exam hub
 - [[UTS/Cloud Computing Infrastructure/Quiz Prep/Weeks 01-03 Quiz Prep]] — practice questions

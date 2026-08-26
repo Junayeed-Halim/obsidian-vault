@@ -14,7 +14,7 @@ tags:
 
 # Quiz Prep — Week 05: Data Centre Fundamentals and Virtualisations
 
-> **Based on actual lecture content:** [[UTS/Cloud Computing Infrastructure/Sources/Lecture/Week 05]]
+> **Based on actual lecture content:** [[Week 05]]
 > **Course:** [[UTS/Cloud Computing Infrastructure/Exam Prep|Cloud Computing Infrastructure]]
 
 ---
@@ -292,6 +292,6 @@ Processing virtualisation can work in two directions:
 
 ## Related
 
-- [[UTS/Cloud Computing Infrastructure/Sources/Lecture/Week 05]] — full lecture notes
+- [[Week 05]] — full lecture notes
 - [[UTS/Cloud Computing Infrastructure/Weekly Summaries/Week 05 Summary]] — summary
 - [[UTS/Cloud Computing Infrastructure/Exam Prep]] — exam hub

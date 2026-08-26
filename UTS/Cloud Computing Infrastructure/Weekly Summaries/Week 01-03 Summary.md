@@ -14,7 +14,7 @@ tags:
 
 # Weeks 01-03 Summary — Cloud Foundations, Virtualisation, Infrastructure Mechanisms
 
-> **Source:** [[UTS/Cloud Computing Infrastructure/Sources/Lecture/Week 01-03]]
+> **Source:** [[Week 01-03]]
 > **Course:** [[UTS/Cloud Computing Infrastructure/Exam Prep|Cloud Computing Infrastructure]]
 > **Lecturer:** Haimin Zhang
 
@@ -147,7 +147,7 @@ tags:
 
 ## Related
 
-- [[UTS/Cloud Computing Infrastructure/Sources/Lecture/Week 01-03]] — full lecture notes
+- [[Week 01-03]] — full lecture notes
 - [[UTS/Cloud Computing Infrastructure/Quiz Prep/Weeks 01-03 Quiz Prep]] — practice questions
 - [[UTS/Cloud Computing Infrastructure/Weekly Summaries/Week 04 Summary]] — next week
 - [[UTS/Cloud Computing Infrastructure/Exam Prep]] — exam hub

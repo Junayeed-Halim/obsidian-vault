@@ -14,7 +14,7 @@ tags:
 
 # Week 05 Summary — Data Centre Fundamentals and Virtualisations
 
-> **Source:** [[UTS/Cloud Computing Infrastructure/Sources/Lecture/Week 05]]
+> **Source:** [[Week 05]]
 > **Course:** [[UTS/Cloud Computing Infrastructure/Exam Prep|Cloud Computing Infrastructure]]
 > **Lecturer:** Haimin Zhang
 
@@ -211,7 +211,7 @@ Non-virtualised physical workloads still exist alongside: IBM p, z, I series (ma
 
 ## Related
 
-- [[UTS/Cloud Computing Infrastructure/Sources/Lecture/Week 05]] — full notes
+- [[Week 05]] — full notes
 - [[UTS/Cloud Computing Infrastructure/Quiz Prep/Week 05 Quiz Prep]] — practice questions
 - [[UTS/Cloud Computing Infrastructure/Weekly Summaries/Week 04 Summary]] — Week 4 (network virtualisation connects here)
 - [[UTS/Cloud Computing Infrastructure/Weekly Summaries/Week 06 Summary]] — Week 6 (DC management)

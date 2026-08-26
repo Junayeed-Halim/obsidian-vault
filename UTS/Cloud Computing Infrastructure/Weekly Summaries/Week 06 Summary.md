@@ -14,7 +14,7 @@ tags:
 
 # Week 06 Summary — Management of Data Center
 
-> **Source:** [[UTS/Cloud Computing Infrastructure/Sources/Lecture/Week 06]]
+> **Source:** [[Week 06]]
 > **Course:** [[UTS/Cloud Computing Infrastructure/Exam Prep|Cloud Computing Infrastructure]]
 > **Lecturer:** Haimin Zhang
 
@@ -155,7 +155,7 @@ These benefits are interconnected — cost saving from consolidation; reduced do
 
 ## Related
 
-- [[UTS/Cloud Computing Infrastructure/Sources/Lecture/Week 06]] — full notes
+- [[Week 06]] — full notes
 - [[UTS/Cloud Computing Infrastructure/Quiz Prep/Week 06 Quiz Prep]] — practice questions
 - [[UTS/Cloud Computing Infrastructure/Weekly Summaries/Week 05 Summary]] — Week 5 (what DC IS)
 - [[UTS/Cloud Computing Infrastructure/Weekly Summaries/Week 03 Summary]] — Week 3 (cloud management mechanisms — parallel concepts)
